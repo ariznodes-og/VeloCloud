@@ -1,0 +1,145 @@
+name: Phase 1 Leapfrog VPS
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vps-single-instance
+  cancel-in-progress: false
+
+env:
+  BRANCH: ${{ github.ref_name }}
+  # Directories mirrored into the repo under vps-data/<path>. Add your own.
+  PERSIST_PATHS: "/home/runner /root /opt /srv"
+
+jobs:
+  Build-VPS:
+    runs-on: ubuntu-latest
+    # Headroom under GitHub's 360 min hard limit so the final backup can run.
+    timeout-minutes: 355
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "VPS Auto-Saver"
+          git config --global user.email "vps@autosaver.com"
+          git config --global pull.rebase true
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Install backup/restore scripts
+        run: |
+          # Scripts live outside the workspace so they never get committed.
+          cat > /tmp/backup.sh <<'EOF'
+          #!/usr/bin/env bash
+          set -uo pipefail
+          cd "$GITHUB_WORKSPACE"
+          DEST="$GITHUB_WORKSPACE/vps-data"
+          mkdir -p "$DEST"
+
+          for p in $PERSIST_PATHS; do
+            [ -d "$p" ] || continue
+            mkdir -p "$DEST$p"
+            # Excludes: nested .git (would become broken submodules), caches, and the
+            # runner image's preinstalled toolchains/runner internals (huge, reinstallable).
+            # --max-size keeps us under GitHub's 100 MB per-file push limit.
+            sudo rsync -a --delete --max-size=50M \
+              --chown="$(id -un):$(id -gn)" \
+              --exclude='.git/' --exclude='node_modules/' --exclude='.cache/' \
+              --exclude='/work/' --exclude='/runners/' --exclude='/.cargo/' \
+              --exclude='/.rustup/' --exclude='/.dotnet/' --exclude='/.nvm/' \
+              --exclude='/.ghcup/' --exclude='/.npm/' --exclude='/.docker/' \
+              --exclude='/.sshx/' --exclude='/hostedtoolcache/' \
+              "$p/" "$DEST$p/" || echo "rsync warning for $p"
+          done
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to back up."
+            exit 0
+          fi
+
+          git commit -qm "Auto-backup $(date -u '+%F %T') UTC [skip ci]"
+          # Retry with rebase in case the remote moved (e.g. you pushed from your PC).
+          for i in 1 2 3; do
+            if git push -q origin "HEAD:${BRANCH}"; then
+              echo "Backup pushed to ${BRANCH}"
+              exit 0
+            fi
+            git pull --rebase -q origin "${BRANCH}" || git rebase --abort
+            sleep 5
+          done
+          echo "Push failed after retries; will retry next cycle."
+          exit 1
+          EOF
+
+          cat > /tmp/restore.sh <<'EOF'
+          #!/usr/bin/env bash
+          set -uo pipefail
+          SRC="$GITHUB_WORKSPACE/vps-data"
+          [ -d "$SRC" ] || { echo "No previous VPS data; fresh start."; exit 0; }
+
+          for p in $PERSIST_PATHS; do
+            [ -d "$SRC$p" ] || continue
+            owner="$(id -un):$(id -gn)"; [ "$p" = "/root" ] && owner="root:root"
+            # No --delete: never wipe files the fresh runner image needs.
+            sudo mkdir -p "$p"
+            sudo rsync -a --chown="$owner" "$SRC$p/" "$p/"
+            echo "Restored $p"
+          done
+
+          # Git only tracks the exec bit; SSH refuses keys with loose permissions.
+          fix_ssh() {
+            [ -d "$1" ] || return 0
+            chmod 700 "$1"
+            find "$1" -type f ! -name '*.pub' ! -name known_hosts -exec chmod 600 {} +
+          }
+          fix_ssh "$HOME/.ssh"
+          sudo bash -c '[ -d /root/.ssh ] && chmod 700 /root/.ssh && find /root/.ssh -type f ! -name "*.pub" ! -name known_hosts -exec chmod 600 {} +' || true
+
+          # Optional hook: commit vps-data/startup.sh to reinstall apt packages, start services, etc.
+          if [ -f "$SRC/startup.sh" ]; then
+            echo "Running startup.sh"
+            sudo bash "$SRC/startup.sh" || echo "startup.sh exited non-zero"
+          fi
+          EOF
+
+          chmod +x /tmp/backup.sh /tmp/restore.sh
+
+      - name: Restore previous VPS state
+        run: /tmp/restore.sh
+
+      - name: Start SSHX VPS with periodic auto-backup
+        run: |
+          # Background backup loop (stops when this step ends).
+          (
+            while true; do
+              sleep 300
+              /tmp/backup.sh || true
+            done
+          ) &
+
+          curl -sSf https://sshx.io/get | sh -s install
+
+          echo "====================================="
+          echo "STARTING SSHX VPS..."
+          echo "YOUR SSHX LINK WILL APPEAR BELOW:"
+          echo "====================================="
+
+          # Exit gracefully before the job timeout so the final backup step always runs.
+          timeout 335m sshx || true
+
+      # Runs on success, failure, timeout, or manual cancel.
+      - name: Final backup
+        if: always()
+        run: /tmp/backup.sh
