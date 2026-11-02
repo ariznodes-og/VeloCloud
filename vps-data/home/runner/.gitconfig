@@ -1,0 +1,7 @@
+[user]
+	name = VPS Auto-Saver
+	email = vps@autosaver.com
+[pull]
+	rebase = true
+[safe]
+	directory = /home/runner/work/VeloCloud/VeloCloud

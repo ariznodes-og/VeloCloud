@@ -1,0 +1,27 @@
+   150.1ms (setup:1929): 2026-10-25 21:38:45
+   150.2ms (setup:1930): /usr/local/bin/pipx inject ansible-core ansible
+   150.3ms (setup:1931): pipx version is 1.16.7
+   150.4ms (setup:1932): Default python interpreter is '/usr/bin/python3.12'
+   150.6ms (_validate_backend_available:380): Backend resolved to pip (source: auto-pip)
+   151.5ms (_venv_dir:1694): Virtual Environment location is /opt/pipx/venvs/ansible-core
+   152.0ms (inject:236): Injecting packages: ['ansible']
+   152.1ms (inject_dep:66): Injecting package ansible
+   152.6ms (run_subprocess:217): running <checking pip's availability>
+   184.5ms (run_subprocess:259): returncode: 0
+   184.7ms (needs_upgrade:183): Time since last upgrade of shared libs, in seconds: 8. Upgrade will be run by pipx if greater than 2592000.
+   184.9ms (package_name_from_spec:517): Determined package name: ansible
+   184.9ms (package_name_from_spec:518): Package name determined in 0.0s
+   185.1ms (run_subprocess:217): running /opt/pipx/venvs/ansible-core/bin/python -c import sysconfig; print(sysconfig.get_path('purelib')); print(sysconfig.get_path('platlib'))
+   202.0ms (run_subprocess:256): stdout: /opt/pipx/venvs/ansible-core/lib/python3.12/site-packages
+/opt/pipx/venvs/ansible-core/lib/python3.12/site-packages
+   202.0ms (run_subprocess:259): returncode: 0
+   202.8ms (_parsed_package_to_package_or_url:152): cleaned package spec: ansible
+   202.9ms (install_package:413): Installing ansible
+   203.0ms (run_subprocess:217): running /opt/pipx/venvs/ansible-core/bin/python -m pip --no-input install ansible
+ 25192.2ms (run_subprocess:259): returncode: 0
+ 25192.5ms (run_subprocess:217): running <fetch_info_in_venv commands>
+ 25213.1ms (run_subprocess:256): stdout: {"sys_path": ["/usr/lib/python312.zip", "/usr/lib/python3.12", "/usr/lib/python3.12/lib-dynload", "/opt/pipx/venvs/ansible-core/lib/python3.12/site-packages", "/opt/pipx/shared/lib/python3.12/site-packages"], "python_version": "3.12.3", "environment": {"implementation_name": "cpython", "implementation_version": "3.12.3", "os_name": "posix", "platform_machine": "x86_64", "platform_release": "7.0.0-1017-azure", "platform_system": "Linux", "platform_version": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026", "python_full_version": "3.12.3", "platform_python_implementation": "CPython", "python_version": "3.12", "sys_platform": "linux"}}
+ 25213.2ms (run_subprocess:259): returncode: 0
+ 25989.0ms (get_venv_metadata_for_package:587): get_venv_metadata_for_package: 797ms
+ 25989.2ms (_parsed_package_to_package_or_url:152): cleaned package spec: ansible
+ 25990.8ms (cli:2036): pipx finished.

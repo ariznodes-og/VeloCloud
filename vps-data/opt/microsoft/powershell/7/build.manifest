@@ -1,0 +1,89 @@
+{
+  "Files": [
+    {
+      "Source": "build.manifest",
+      "Paths": [
+        "build.manifest"
+      ],
+      "Hash": ""
+    },
+    {
+      "Source": "_manifest/spdx_2.2/manifest.spdx.json.sha256",
+      "Paths": [
+        "_manifest/spdx_2.2/manifest.spdx.json.sha256"
+      ],
+      "Hash": "09B49770CE2164FBEE6AAE4A27A3452C50032D88943D43D6C3DEF5B8ACAE72DE"
+    },
+    {
+      "Source": "_manifest/spdx_2.2/manifest.spdx.json",
+      "Paths": [
+        "_manifest/spdx_2.2/manifest.spdx.json"
+      ],
+      "Hash": "16D2B524E3CB21FC3F7D5403EEC930FA410BC2B97A058DDEC1F0DB6BE2A13279"
+    },
+    {
+      "Source": "_manifest/spdx_2.2/manifest.cat",
+      "Paths": [
+        "_manifest/spdx_2.2/manifest.cat"
+      ],
+      "Hash": "1DDFF2AA4DDD3BE97F4705170F3405F68F7D6385C77D32884064A8222F3EA637"
+    },
+    {
+      "Source": "_manifest/spdx_2.2/bsi.cose",
+      "Paths": [
+        "_manifest/spdx_2.2/bsi.cose"
+      ],
+      "Hash": "5207AC163297E29ED8AC25F72AFD357D4CC886C330E3A9FAA31271AE25CF30E7"
+    },
+    {
+      "Source": "_manifest/spdx_3.0/manifest.spdx.json",
+      "Paths": [
+        "_manifest/spdx_3.0/manifest.spdx.json"
+      ],
+      "Hash": "65E0AB2C8D9631EF49E5DF3EAFB918A878121D5E2CBBEFF60FF288A549EFAAEE"
+    },
+    {
+      "Source": "_manifest/spdx_3.0/manifest.spdx.json.sha256",
+      "Paths": [
+        "_manifest/spdx_3.0/manifest.spdx.json.sha256"
+      ],
+      "Hash": "89C53D95F05C7D401C5CA4C2B5B28C19A1A4E55F5123D7B9AADF87E30A71BE2B"
+    },
+    {
+      "Source": "_manifest/comparison-result.json",
+      "Paths": [
+        "_manifest/comparison-result.json"
+      ],
+      "Hash": "8EA77AF0E150AB5296922D06B62C3A5738E55B97818C5BDCA7FB245597EB652C"
+    },
+    {
+      "Source": "_manifest/spdx_2.2/manifest.spdx.cose",
+      "Paths": [
+        "_manifest/spdx_2.2/manifest.spdx.cose"
+      ],
+      "Hash": "AE33FAD207ECBAB43914E6D42B7BAF4D0E0612D8541E5718EDF7B65C29CA5589"
+    },
+    {
+      "Source": "_manifest/spdx_2.2/ESRPClientLogs1008212227662.json",
+      "Paths": [
+        "_manifest/spdx_2.2/ESRPClientLogs1008212227662.json"
+      ],
+      "Hash": "D79BBDCFBBB1A506B8146EBD56D1B8AC93917A690B88AB4B71D109B906F2A41D"
+    },
+    {
+      "Source": "libpsl-native.so",
+      "Paths": [
+        "libpsl-native.so"
+      ],
+      "Hash": "D806D57E2150B483697A824B79BBC4314212A6C3B56F614013377E7A1080B873"
+    },
+    {
+      "Source": "_manifest/spdx_2.2/bsi.json",
+      "Paths": [
+        "_manifest/spdx_2.2/bsi.json"
+      ],
+      "Hash": "DE6B8E55E04C97321CFBA4845F9E1035F0D69EF89D9A2384AECAAAC0CD7D1727"
+    }
+  ],
+  "HashType": "SHA256Hash"
+}

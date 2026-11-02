@@ -1,0 +1,22 @@
+status: 200
+date: Sun, 25 Oct 2026 21:19:31 GMT
+server: gunicorn
+x-powered-by: Zope (www.zope.org), Python (www.python.org)
+content-security-policy: frame-ancestors 'self';
+content-type: application/json
+strict-transport-security: max-age=15552000
+vary: Accept,Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-launchpad-revision: 8aad169d2e22e99bfd86998a2cf0f0a07502f5e7
+x-lazr-notifications: []
+x-xss-protection: 1; mode=block
+x-vcs-revision: 8aad169d2e22e99bfd86998a2cf0f0a07502f5e7
+x-request-id: 425a74ed-0a88-4326-aacc-b7504b24d706
+content-length: 3180
+-content-encoding: gzip
+content-location: https://api.launchpad.net/devel/~git-core?name=%22ppa%22&ws.op=getPPAByName
+-varied-accept: application/json
+-varied-accept-encoding: gzip, deflate
+
+{"self_link": "https://api.launchpad.net/devel/~git-core/+archive/ubuntu/ppa", "web_link": "https://launchpad.net/~git-core/+archive/ubuntu/ppa", "resource_type_link": "https://api.launchpad.net/devel/#archive", "translations_usage": "Not Applicable", "bug_reporting_guidelines": null, "content_templates": null, "bug_reported_acknowledgement": null, "official_bug_tags": ["a11y", "appstream", "bionic", "bisect-done", "bitesize", "block-proposed", "block-proposed-focal", "block-proposed-jammy", "block-proposed-noble", "block-proposed-oracular", "cherry-pick", "community-security", "desktop-file", "dist-upgrade", "fixed-upstream", "focal", "ftbfs", "hw-specific", "iso-testing", "jammy", "kernel-bug", "manpage", "metabug", "multiarch", "multigpu", "multimonitor", "needs-bisect", "needs-design", "needs-packaging", "needs-reassignment", "noble", "nvidia", "package-conflict", "packaging", "patch", "patch-accepted-debian", "patch-accepted-upstream", "patch-forwarded-debian", "patch-forwarded-upstream", "patch-needswork", "patch-rejected", "patch-rejected-debian", "patch-rejected-upstream", "performing-bisect", "qt4-removal", "regression-proposed", "regression-release", "regression-update", "resolute", "stonking", "string-fix", "suspend-resume", "systemd-boot", "tenacious", "testcase", "unmetdeps", "update-excuse", "upgrade-software-version", "verification-done-bionic", "verification-done-focal", "verification-done-jammy", "verification-done-noble", "verification-done-resolute", "verification-done-stonking", "verification-failed-bionic", "verification-failed-jammy", "verification-needed-bionic", "verification-needed-focal", "verification-needed-jammy", "verification-needed-noble", "verification-needed-resolute", "verification-needed-stonking", "wayland"], "webhooks_collection_link": "https://api.launchpad.net/devel/~git-core/+archive/ubuntu/ppa/webhooks", "owner_link": "https://api.launchpad.net/devel/~git-core", "name": "ppa", "displayname": "Git stable releases", "reference": "~git-core/ubuntu/ppa", "distribution_link": "https://api.launchpad.net/devel/ubuntu", "private": false, "suppress_subscription_notifications": false, "dependencies_collection_link": "https://api.launchpad.net/devel/~git-core/+archive/ubuntu/ppa/dependencies", "description": "The most current stable version of Git for Ubuntu.\n\nFor release candidates, go to https://launchpad.net/~git-core/+archive/candidate .", "signing_key_fingerprint": "F911AB184317630C59970973E363C90F8F1B6217", "require_virtualized": true, "build_debug_symbols": true, "publish_debug_symbols": true, "permit_obsolete_series_uploads": false, "authorized_size": 2048, "status": "Active", "external_dependencies": null, "metadata_overrides": null, "processors_collection_link": "https://api.launchpad.net/devel/~git-core/+archive/ubuntu/ppa/processors", "enabled_restricted_processors_collection_link": "https://api.launchpad.net/devel/~git-core/+archive/ubuntu/ppa/enabled_restricted_processors", "publishing_method": "Local", "repository_format": "Debian", "publish": true, "relative_build_score": 0, "http_etag": "\"d8f49ffbadfb759b7a5e3387aaac3520916426b0-3bf4db3300476050d3b5d21cff8a0a8a0ca72195\""}

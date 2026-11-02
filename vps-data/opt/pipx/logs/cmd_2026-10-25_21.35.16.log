@@ -1,0 +1,13 @@
+   241.1ms (setup:1929): 2026-10-25 21:35:16
+   241.2ms (setup:1930): /usr/local/lib/python3.12/dist-packages/pipx/__main__.py ensurepath
+   241.2ms (setup:1931): pipx version is 1.16.7
+   241.3ms (setup:1932): Default python interpreter is '/usr/bin/python3.12'
+   241.4ms (mkdir:96): creating directory /opt/pipx/venvs
+   241.5ms (mkdir:96): creating directory /opt/pipx_bin
+   241.6ms (mkdir:96): creating directory /root/.local/share/man
+   241.7ms (mkdir:96): creating directory /opt/pipx/.cache
+   241.8ms (mkdir:96): creating directory /opt/pipx/py
+   241.9ms (setup:1946): Adding CACHEDIR.TAG to cache directory
+   242.0ms (setup:1946): Adding CACHEDIR.TAG to cache directory
+   242.2ms (_validate_backend_available:380): Backend resolved to pip (source: auto-pip)
+   990.9ms (cli:2036): pipx finished.

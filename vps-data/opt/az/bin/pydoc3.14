@@ -1,0 +1,5 @@
+#!/mnt/repo/python_env/bin/python3.14
+
+import pydoc
+if __name__ == '__main__':
+    pydoc.cli()

@@ -1,0 +1,256 @@
+# --------------------------------------------------------------------------------------------
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See License.txt in the project root for license information.
+# --------------------------------------------------------------------------------------------
+
+import os
+
+from knack.log import get_logger
+from knack.util import CLIError
+
+logger = get_logger(__name__)
+
+UPGRADE_MSG = 'Not able to upgrade automatically. Instructions can be found at https://aka.ms/doc/InstallAzureCli'
+
+
+def rest_call(cmd, url, method=None, headers=None, uri_parameters=None,
+              body=None, skip_authorization_header=False, resource=None, output_file=None):
+    from azure.cli.core.commands.transform import unregister_global_transforms
+    # No transform should be performed on `az rest`.
+    unregister_global_transforms(cmd.cli_ctx)
+
+    from azure.cli.core.util import send_raw_request
+    r = send_raw_request(cmd.cli_ctx, method, url, headers, uri_parameters, body,
+                         skip_authorization_header, resource, output_file)
+    if not output_file and r.content:
+        try:
+            return r.json()
+        except ValueError:
+            logger.warning('Not a json response, outputting to stdout. For binary data '
+                           'suggest use "--output-file" to write to a file')
+            print(r.text)
+    return None
+
+
+def show_version(cmd):  # pylint: disable=unused-argument
+    from azure.cli.core.util import get_az_version_json
+    versions = get_az_version_json()
+    return versions
+
+
+def upgrade_version(cmd, update_all=None, yes=None, allow_preview=None):  # pylint: disable=too-many-locals, too-many-statements, too-many-branches, no-member, unused-argument
+    import platform
+    import sys
+    import subprocess
+    from azure.cli.core import telemetry
+    from azure.cli.core import __version__ as local_version
+    from azure.cli.core._environment import _ENV_AZ_INSTALLER
+    from azure.cli.core.extension import get_extensions, WheelExtension
+    from packaging.version import parse
+
+    update_cli = True
+    from azure.cli.core.util import get_latest_version_from_ame_storage
+    latest_version = get_latest_version_from_ame_storage()
+    if not latest_version:
+        logger.warning("Failed to get the latest azure-cli version.")
+        update_cli = False
+        if not update_all:
+            return
+    elif parse(latest_version) <= parse(local_version):
+        logger.warning("You already have the latest azure-cli version: %s", local_version)
+        update_cli = False
+        if not update_all:
+            return
+    exts = [ext.name for ext in get_extensions(ext_type=WheelExtension)] if update_all else []
+
+    exit_code = 0
+    installer = os.getenv(_ENV_AZ_INSTALLER) or ''
+    installer = installer.upper()
+    if update_cli:
+        latest_version_msg = 'It will be updated to {}.'.format(latest_version) if yes \
+            else 'Latest version available is {}.'.format(latest_version)
+        logger.warning("Your current Azure CLI version is %s. %s", local_version, latest_version_msg)
+        from knack.prompting import prompt_y_n, NoTTYException
+        if not yes:
+            logger.warning("Please check the release notes first: https://learn.microsoft.com/"
+                           "cli/azure/release-notes-azure-cli")
+            try:
+                confirmation = prompt_y_n("Do you want to continue?", default='y')
+            except NoTTYException:
+                from azure.cli.core.azclierror import UnclassifiedUserFault
+                raise UnclassifiedUserFault("No tty available.", "Please run command with --yes.")
+
+            if not confirmation:
+                telemetry.set_success("Upgrade stopped by user")
+                return
+
+        if installer == 'DEB':
+            from azure.cli.core.util import in_cloud_console
+            if in_cloud_console():
+                raise CLIError("az upgrade is not supported in Cloud Shell.")
+            apt_update_cmd = 'apt-get update'.split()
+            az_update_cmd = 'apt-get install --only-upgrade -y azure-cli'.split()
+            if os.geteuid() != 0:  # pylint: disable=no-member
+                apt_update_cmd.insert(0, 'sudo')
+                az_update_cmd.insert(0, 'sudo')
+            exit_code = subprocess.call(apt_update_cmd)
+            if exit_code == 0:
+                logger.debug("Update azure cli with '%s'", " ".join(az_update_cmd))
+                exit_code = subprocess.call(az_update_cmd)
+        elif installer == 'RPM':
+            from azure.cli.core.util import get_linux_distro
+            distname, _ = get_linux_distro()
+            if not distname:
+                logger.warning(UPGRADE_MSG)
+            else:
+                distname = distname.lower().strip()
+                if any(x in distname for x in ['centos', 'rhel', 'red hat', 'fedora']):
+                    update_cmd = 'yum update -y azure-cli'.split()
+                    if os.geteuid() != 0:  # pylint: disable=no-member
+                        update_cmd.insert(0, 'sudo')
+                    logger.debug("Update azure cli with '%s'", " ".join(update_cmd))
+                    exit_code = subprocess.call(update_cmd)
+                elif any(x in distname for x in ['opensuse', 'suse', 'sles']):
+                    zypper_refresh_cmd = ['zypper', 'refresh']
+                    az_update_cmd = 'zypper update -y azure-cli'.split()
+                    if os.geteuid() != 0:  # pylint: disable=no-member
+                        zypper_refresh_cmd.insert(0, 'sudo')
+                        az_update_cmd.insert(0, 'sudo')
+                    exit_code = subprocess.call(zypper_refresh_cmd)
+                    if exit_code == 0:
+                        logger.debug("Update azure cli with '%s'", " ".join(az_update_cmd))
+                        exit_code = subprocess.call(az_update_cmd)
+                else:
+                    logger.warning(UPGRADE_MSG)
+        elif installer == 'HOMEBREW':
+            logger.debug("Update homebrew formulae")
+            exit_code = subprocess.call(['brew', 'update'])
+            if exit_code == 0:
+                update_cmd = ['brew', 'upgrade', 'azure-cli']
+                logger.debug("Update azure cli with '%s'", " ".join(update_cmd))
+                exit_code = subprocess.call(update_cmd)
+        elif installer == 'HOMEBREW_CASK':
+            logger.debug("Update homebrew cask")
+            # Determine cask token: 'azure-cli-preview' (custom tap) or 'azure-cli' (homebrew-cask)
+            try:
+                preview_installed = subprocess.call(['brew', 'list', '--cask', 'azure-cli-preview'],
+                                                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) == 0
+                cli_installed = subprocess.call(['brew', 'list', '--cask', 'azure-cli'],
+                                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) == 0
+                if preview_installed:
+                    cask_token = 'azure-cli-preview'
+                elif cli_installed:
+                    cask_token = 'azure-cli'
+                else:
+                    raise CLIError(UPGRADE_MSG)
+            except OSError as ex:
+                logger.debug("Failed to detect Homebrew cask token: %s", ex)
+                cask_token = 'azure-cli'
+            exit_code = subprocess.call(['brew', 'update'])
+            if exit_code == 0:
+                update_cmd = ['brew', 'upgrade', '--cask', cask_token]
+                logger.debug("Update azure cli with '%s'", " ".join(update_cmd))
+                exit_code = subprocess.call(update_cmd)
+        elif installer == 'PIP':
+            pip_args = [sys.executable, '-m', 'pip', 'install', '--upgrade', 'azure-cli', '-vv',
+                        '--disable-pip-version-check', '--no-cache-dir']
+            logger.debug("Update azure cli with '%s'", " ".join(pip_args))
+            exit_code = subprocess.call(pip_args, shell=platform.system() == 'Windows')
+        elif installer == 'DOCKER':
+            logger.warning("Exit the container to pull latest image with 'docker pull mcr.microsoft.com/azure-cli' "
+                           "or run 'pip install --upgrade azure-cli' in this container")
+        elif installer == 'MSI':
+            _upgrade_on_windows()
+        elif installer == 'ZIP':
+            zip_url = 'https://aka.ms/installazurecliwindowszipx64'
+            logger.warning("Please download the latest ZIP from %s, delete the old installation folder and extract the "
+                           "new version to the same location", zip_url)
+        else:
+            logger.warning(UPGRADE_MSG)
+    if exit_code:
+        err_msg = "CLI upgrade failed."
+        logger.warning(err_msg)
+        telemetry.set_failure(err_msg)
+        sys.exit(exit_code)
+
+    # Avoid using python modules directly as they may have been changed due to upgrade.
+    # If you do need to use them, you may need to reload them and their dependent modules.
+    # Otherwise you may have such issue https://github.com/Azure/azure-cli/issues/16952
+    import importlib
+    import json
+    importlib.reload(subprocess)
+    importlib.reload(json)
+
+    version_result = subprocess.check_output(['az', 'version', '-o', 'json'], shell=platform.system() == 'Windows')
+    version_json = json.loads(version_result)
+    new_version = version_json['azure-cli-core']
+
+    if update_cli and new_version == local_version:
+        err_msg = "CLI upgrade failed or aborted."
+        logger.warning(err_msg)
+        telemetry.set_failure(err_msg)
+        sys.exit(1)
+
+    if exts:
+        logger.warning("Upgrading extensions")
+    for ext_name in exts:
+        try:
+            logger.warning("Checking update for %s", ext_name)
+            cmds = ['az', 'extension', 'update', '-n', ext_name]
+            if allow_preview is not None:
+                cmds += ["--allow-preview", str(allow_preview)]
+            subprocess.call(cmds, shell=platform.system() == 'Windows')
+        except Exception as ex:  # pylint: disable=broad-except
+            msg = "Extension {} update failed during az upgrade. {}".format(ext_name, str(ex))
+            raise CLIError(msg)
+    logger.warning("Upgrade finished.")
+
+
+def _upgrade_on_windows():
+    """Download MSI to a temp folder and install it with msiexec.exe.
+    Directly installing from URL may be blocked by policy: https://github.com/Azure/azure-cli/issues/19171
+    This also gives the user a chance to manually install the MSI in case of msiexec.exe failure.
+    """
+    import platform
+    import subprocess
+    import sys
+    import tempfile
+
+    from azure.cli.core.util import rmtree_with_retry
+
+    if platform.architecture()[0] == '32bit':
+        msi_url = 'https://aka.ms/installazurecliwindows'
+    else:
+        msi_url = 'https://aka.ms/installazurecliwindowsx64'
+    logger.warning("Updating Azure CLI with MSI from %s", msi_url)
+
+    # Save MSI to ~\AppData\Local\Temp\azure-cli-msi, clean up the folder first
+    msi_dir = os.path.join(tempfile.gettempdir(), 'azure-cli-msi')
+    rmtree_with_retry(msi_dir)
+    os.makedirs(msi_dir, exist_ok=True)
+
+    msi_path = _download_from_url(msi_url, msi_dir)
+
+    subprocess.Popen(['msiexec.exe', '/i', msi_path])
+    logger.warning("Installation started. Please complete the upgrade in the opened window.\nTo update extensions, "
+                   "please run `az upgrade` again after completing the upgrade.")
+    sys.exit(0)
+
+
+def _download_from_url(url, target_dir):
+    import requests
+    from azure.cli.core.util import should_disable_connection_verify
+    r = requests.get(url, stream=True, verify=not should_disable_connection_verify())
+    if r.status_code != 200:
+        raise CLIError("Request to {} failed with {}".format(url, r.status_code))
+
+    # r.url is the real path of the msi, like'https://azcliprod.blob.core.windows.net/msi/azure-cli-2.27.1.msi'
+    file_name = r.url.rsplit('/')[-1]
+    msi_path = os.path.join(target_dir, file_name)
+    logger.warning("Downloading MSI to %s", msi_path)
+
+    with open(msi_path, 'wb') as f:
+        for chunk in r.iter_content(chunk_size=1024):
+            f.write(chunk)
+
+    return msi_path

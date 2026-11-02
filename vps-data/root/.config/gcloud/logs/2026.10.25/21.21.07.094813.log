@@ -1,0 +1,44 @@
+2026-10-25 21:21:07,095 DEBUG    root            Running [gcloud] with arguments: [-v: "None"]
+2026-10-25 21:21:07,127 DEBUG    root            Loaded Command Group: ['gcloud', 'version']
+2026-10-25 21:21:07,128 DEBUG    root            Running [gcloud.version] with arguments: []
+2026-10-25 21:21:07,128 DEBUG    root            Failed to read GCE cache file: [Errno 2] No such file or directory: '/root/.config/gcloud/gce'
+2026-10-25 21:21:07,147 DEBUG    root            Failed to check metadata server: <urlopen error [Errno -2] Name or service not known>
+2026-10-25 21:21:07,150 DEBUG    root            Chosen display Format:flattened[no-pad,separator=" "]
+2026-10-25 21:21:07,150 INFO     root            Display format: "flattened[no-pad,separator=" "]"
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ Google Cloud SDK
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___  
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ 590.0.1
+
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ alpha
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___  
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ 2026.10.22
+
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ beta
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___  
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ 2026.10.22
+
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ bq
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___  
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ 2.1.41
+
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ bundled-python3-unix
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___  
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ 3.14.8
+
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ core
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___  
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ 2026.10.22
+
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ gcloud-crc32c
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___  
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ 1.0.0
+
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ gsutil
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___  
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ 5.38
+
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ preview
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___  
+2026-10-25 21:21:07,161 INFO     ___FILE_ONLY___ 2026.10.22
+
+2026-10-25 21:21:07,162 DEBUG    root            SDK update checks are disabled.

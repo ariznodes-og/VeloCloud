@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: azure-devops
+Version: 1.0.10
+Summary: Tools for managing Azure DevOps.
+Home-page: https://github.com/Microsoft/azure-devops-cli-extension
+Author: Microsoft
+Author-email: VSTS_Social@microsoft.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: distro>=1.6.0
+Requires-Dist: distro (>=1.6.0)
+
+Microsoft DevOps CLI Extension for Windows, Mac and Linux
+=========================================================
+
+1.0.0
+---------------------
+
+* Initial preview release.
