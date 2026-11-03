@@ -1,0 +1,66 @@
+﻿2026-11-03T00:28:36.0157938Z ##[group]Run # Background backup loop (stops when this step ends).
+2026-11-03T00:28:36.0158527Z [36;1m# Background backup loop (stops when this step ends).[0m
+2026-11-03T00:28:36.0158701Z [36;1m([0m
+2026-11-03T00:28:36.0158810Z [36;1m  while true; do[0m
+2026-11-03T00:28:36.0158936Z [36;1m    sleep 300[0m
+2026-11-03T00:28:36.0159062Z [36;1m    /tmp/backup.sh || true[0m
+2026-11-03T00:28:36.0159199Z [36;1m  done[0m
+2026-11-03T00:28:36.0159302Z [36;1m) &[0m
+2026-11-03T00:28:36.0159402Z [36;1m[0m
+2026-11-03T00:28:36.0159548Z [36;1mcurl -sSf https://sshx.io/get | sh -s install[0m
+2026-11-03T00:28:36.0159712Z [36;1m[0m
+2026-11-03T00:28:36.0159831Z [36;1mecho "====================================="[0m
+2026-11-03T00:28:36.0160008Z [36;1mecho "STARTING SSHX VPS..."[0m
+2026-11-03T00:28:36.0160167Z [36;1mecho "YOUR SSHX LINK WILL APPEAR BELOW:"[0m
+2026-11-03T00:28:36.0160338Z [36;1mecho "====================================="[0m
+2026-11-03T00:28:36.0160485Z [36;1m[0m
+2026-11-03T00:28:36.0160677Z [36;1m# Exit gracefully before the job timeout so the final backup step always runs.[0m
+2026-11-03T00:28:36.0160898Z [36;1mtimeout 335m sshx || true[0m
+2026-11-03T00:28:36.0177381Z shell: /usr/bin/bash -e {0}
+2026-11-03T00:28:36.0177514Z env:
+2026-11-03T00:28:36.0177619Z   BRANCH: main
+2026-11-03T00:28:36.0177747Z   PERSIST_PATHS: /home/runner /root /opt /srv
+2026-11-03T00:28:36.0177903Z ##[endgroup]
+2026-11-03T00:28:36.3325207Z [0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
+2026-11-03T00:28:36.3361614Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-11-03T00:28:36.3362969Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-11-03T00:28:36.3363434Z 
+2026-11-03T00:28:36.6518798Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-11-03T00:28:37.0422659Z   0 2869k    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-11-03T00:28:37.0423065Z 100 2869k  100 2869k    0     0  4063k      0 --:--:-- --:--:-- --:--:-- 4059k
+2026-11-03T00:28:37.0447655Z 
+2026-11-03T00:28:37.0448271Z [0m[35;1m↯ Adding sshx binary to [4m/usr/local/bin[0m
+2026-11-03T00:28:37.0879679Z 
+2026-11-03T00:28:37.0880034Z [0m[35;1m↯ Done! You can now run sshx.[0m
+2026-11-03T00:28:37.0881555Z =====================================
+2026-11-03T00:28:37.0881765Z STARTING SSHX VPS...
+2026-11-03T00:28:37.0881898Z YOUR SSHX LINK WILL APPEAR BELOW:
+2026-11-03T00:28:37.0882034Z =====================================
+2026-11-03T00:28:37.2241218Z 
+2026-11-03T00:28:37.2241770Z   [1;32msshx[0m [32mv0.4.1[0m
+2026-11-03T00:28:37.2242225Z 
+2026-11-03T00:28:37.2242585Z   [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/17FjBPqAji#TsHkcKhT9TA0nM[0m
+2026-11-03T00:28:37.2242939Z   [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
+2026-11-03T00:28:37.2243099Z 
+2026-11-03T00:33:39.8469550Z Backup pushed to main
+2026-11-03T00:38:42.3990993Z Backup pushed to main
+2026-11-03T00:43:44.7421952Z Backup pushed to main
+2026-11-03T00:48:47.2299307Z Backup pushed to main
+2026-11-03T00:53:49.4806982Z Backup pushed to main
+2026-11-03T00:58:51.9419035Z Backup pushed to main
+2026-11-03T01:03:54.4055796Z Backup pushed to main
+2026-11-03T01:08:56.8071749Z Backup pushed to main
+2026-11-03T01:13:59.0757329Z Backup pushed to main
+2026-11-03T01:19:01.5141614Z Backup pushed to main
+2026-11-03T01:24:03.8810685Z Backup pushed to main
+2026-11-03T01:29:06.2199866Z Backup pushed to main
+2026-11-03T01:34:08.8059569Z Backup pushed to main
+2026-11-03T01:39:11.0467281Z Backup pushed to main
+2026-11-03T01:44:13.1740241Z Backup pushed to main
+2026-11-03T01:49:15.4923459Z Backup pushed to main
+2026-11-03T01:54:18.0149745Z Backup pushed to main
+2026-11-03T01:59:20.5629317Z Backup pushed to main
+2026-11-03T02:04:23.0238816Z Backup pushed to main
+2026-11-03T02:09:25.4348215Z Backup pushed to main
+2026-11-03T02:14:27.9599064Z Backup pushed to main
+2026-11-03T02:19:30.2360245Z Backup p
