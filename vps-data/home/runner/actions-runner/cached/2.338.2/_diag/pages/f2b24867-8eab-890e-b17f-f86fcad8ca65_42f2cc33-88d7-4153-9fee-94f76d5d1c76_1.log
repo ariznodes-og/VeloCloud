@@ -1,0 +1,64 @@
+﻿2026-11-03T15:31:38.1433520Z ##[group]Run (
+2026-11-03T15:31:38.1433768Z [36;1m([0m
+2026-11-03T15:31:38.1433957Z [36;1m  while true; do[0m
+2026-11-03T15:31:38.1434182Z [36;1m    sleep 300[0m
+2026-11-03T15:31:38.1434407Z [36;1m    /tmp/backup.sh || true[0m
+2026-11-03T15:31:38.1434644Z [36;1m  done[0m
+2026-11-03T15:31:38.1434823Z [36;1m) &[0m
+2026-11-03T15:31:38.1435002Z [36;1m[0m
+2026-11-03T15:31:38.1435546Z [36;1mecho "====================================="[0m
+2026-11-03T15:31:38.1435874Z [36;1mecho "STARTING SSHX VPS..."[0m
+2026-11-03T15:31:38.1436152Z [36;1mecho "YOUR SSHX LINK WILL APPEAR BELOW:"[0m
+2026-11-03T15:31:38.1436452Z [36;1mecho "====================================="[0m
+2026-11-03T15:31:38.1436725Z [36;1m[0m
+2026-11-03T15:31:38.1436910Z [36;1mtimeout 335m sshx || true[0m
+2026-11-03T15:31:38.1450462Z shell: /usr/bin/bash -e {0}
+2026-11-03T15:31:38.1450712Z env:
+2026-11-03T15:31:38.1450892Z   BRANCH: main
+2026-11-03T15:31:38.1451077Z   SCAN_ROOTS: / /mnt
+2026-11-03T15:31:38.1451274Z   MAX_MB: 90
+2026-11-03T15:31:38.1451494Z ##[endgroup]
+2026-11-03T15:31:38.1483398Z =====================================
+2026-11-03T15:31:38.1484099Z STARTING SSHX VPS...
+2026-11-03T15:31:38.1484601Z YOUR SSHX LINK WILL APPEAR BELOW:
+2026-11-03T15:31:38.1485084Z =====================================
+2026-11-03T15:31:38.3014067Z 
+2026-11-03T15:31:38.3015368Z   [1;32msshx[0m [32mv0.4.1[0m
+2026-11-03T15:31:38.3015860Z 
+2026-11-03T15:31:38.3016523Z   [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/kSosZGXEfY#94XGbe4ZP03O2E[0m
+2026-11-03T15:31:38.3017312Z   [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
+2026-11-03T15:31:38.3017652Z 
+2026-11-03T15:38:21.9110852Z Backup pushed to main
+2026-11-03T15:43:21.9169186Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T15:43:26.6927876Z Backup pushed to main
+2026-11-03T15:48:26.6982662Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T15:48:31.9984880Z Backup pushed to main
+2026-11-03T15:53:32.0041790Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T15:53:37.0277033Z Backup pushed to main
+2026-11-03T15:58:37.0333037Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T15:58:42.8117002Z Backup pushed to main
+2026-11-03T16:03:42.8174732Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:03:47.7482800Z Backup pushed to main
+2026-11-03T16:08:47.7535816Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:08:52.9104297Z Backup pushed to main
+2026-11-03T16:13:52.9160869Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:13:57.7983335Z Backup pushed to main
+2026-11-03T16:18:57.8038233Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:19:02.6258670Z Backup pushed to main
+2026-11-03T16:24:02.6315059Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:24:07.4217131Z Backup pushed to main
+2026-11-03T16:29:07.4274279Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:29:12.2920828Z Backup pushed to main
+2026-11-03T16:34:12.2979998Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:34:17.0793586Z Backup pushed to main
+2026-11-03T16:39:17.0848529Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:39:23.0611478Z Backup pushed to main
+2026-11-03T16:44:23.0669329Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:44:29.0539522Z Backup pushed to main
+2026-11-03T16:49:29.0593387Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:49:34.0579574Z Backup pushed to main
+2026-11-03T16:54:34.0637932Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:54:39.0817191Z Backup pushed to main
+2026-11-03T16:59:39.0873766Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-03T16:59:43.8997805Z Backup pushed to main
+2026-11-03T17:04:43.9054775Z rm: cannot remove '/tmp/skipped.list': Operation not
