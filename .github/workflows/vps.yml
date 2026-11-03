@@ -14,13 +14,14 @@ concurrency:
 
 env:
   BRANCH: ${{ github.ref_name }}
-  # Directories mirrored into the repo under vps-data/<path>. Add your own.
-  PERSIST_PATHS: "/home/runner /root /opt /srv"
+  # Whole-VPS scan: every file you create/change anywhere under these roots is saved.
+  SCAN_ROOTS: "/ /mnt"
+  # GitHub rejects files >100 MB. Bigger files are skipped and listed in vps-data/_meta/skipped-too-large.txt
+  MAX_MB: "90"
 
 jobs:
   Build-VPS:
     runs-on: ubuntu-latest
-    # Headroom under GitHub's 360 min hard limit so the final backup can run.
     timeout-minutes: 355
     steps:
       - name: Checkout Repo
@@ -39,38 +40,85 @@ jobs:
 
       - name: Install backup/restore scripts
         run: |
-          # Scripts live outside the workspace so they never get committed.
           cat > /tmp/backup.sh <<'EOF'
           #!/usr/bin/env bash
+          # Saves every file created/changed since the session started, anywhere on the VPS.
           set -uo pipefail
+          export LC_ALL=C
           cd "$GITHUB_WORKSPACE"
           DEST="$GITHUB_WORKSPACE/vps-data"
-          mkdir -p "$DEST"
+          MARK=/tmp/.vps-session-start
+          [ -f "$MARK" ] || { echo "Session marker missing (restore did not finish); skipping backup."; exit 0; }
+          mkdir -p "$DEST/_meta"
+          rm -f /tmp/changed.list /tmp/skipped.list /tmp/deleted.list
 
-          for p in $PERSIST_PATHS; do
-            [ -d "$p" ] || continue
-            mkdir -p "$DEST$p"
-            # Excludes: nested .git (would become broken submodules), caches, and the
-            # runner image's preinstalled toolchains/runner internals (huge, reinstallable).
-            # --max-size keeps us under GitHub's 100 MB per-file push limit.
-            sudo rsync -a --delete --max-size=50M \
-              --chown="$(id -un):$(id -gn)" \
-              --exclude='.git/' --exclude='node_modules/' --exclude='.cache/' \
-              --exclude='/work/' --exclude='/runners/' --exclude='/.cargo/' \
-              --exclude='/.rustup/' --exclude='/.dotnet/' --exclude='/.nvm/' \
-              --exclude='/.ghcup/' --exclude='/.npm/' --exclude='/.docker/' \
-              --exclude='/.sshx/' --exclude='/hostedtoolcache/' \
-              "$p/" "$DEST$p/" || echo "rsync warning for $p"
-          done
+          # 1) Find changed files. -cnewer uses ctime, so files extracted with old
+          #    timestamps (unzip, tar, git clone) are still detected.
+          #    Pruned: pseudo-FS, system dirs that the fresh runner image already owns
+          #    (reinstall those via apt, which is tracked separately), caches, boot-time noise.
+          sudo find $SCAN_ROOTS -xdev \
+            \( -path /proc -o -path /sys -o -path /dev -o -path /run -o -path /tmp -o -path /var/tmp \
+               -o -path /var/log -o -path /var/cache -o -path /var/lib -o -path /boot -o -path /snap \
+               -o -path /lost+found -o -path /bin -o -path /sbin -o -path /lib -o -path /lib32 \
+               -o -path /lib64 -o -path /libx32 \
+               -o \( -path '/usr/*' ! -path /usr/local ! -path '/usr/local/*' \) \
+               -o -path /usr/local/bin/sshx \
+               -o -path /home/runner/work -o -path /home/runner/runners \
+               -o -path '/home/*/.cache' -o -path '/home/*/.npm' -o -path '/home/*/.cargo' \
+               -o -path '/home/*/.rustup' -o -path '/home/*/.dotnet' -o -path '/home/*/.nvm' \
+               -o -path '/home/*/.ghcup' -o -path /root/.cache -o -path /root/.npm \
+               -o -path /opt/hostedtoolcache -o -path /opt/actionarchivecache \
+               -o -path /opt/runner-cache -o -path /opt/post-generation \
+               -o -path /etc/resolv.conf -o -path /etc/hosts -o -path /etc/hostname \
+               -o -path /etc/machine-id -o -path /etc/mtab -o -path /etc/ld.so.cache \
+               -o -path '/etc/passwd*' -o -path '/etc/shadow*' -o -path '/etc/group*' \
+               -o -path '/etc/gshadow*' -o -path /etc/alternatives -o -path /etc/ssl/certs \
+               -o -path '/etc/ssh/ssh_host_*' \
+               -o -name .git -o -name __pycache__ \) -prune -o \
+            \( -cnewer "$MARK" -type f -size +"${MAX_MB}M" -fprint /tmp/skipped.list \) -o \
+            \( -cnewer "$MARK" \( -type f -o -type l \) -print0 \) > /tmp/changed.list 2>/dev/null
 
+          # 2) Copy them into vps-data/<absolute path>. sudo tar so root-only files are readable.
+          if [ -s /tmp/changed.list ]; then
+            sudo tar --null --no-recursion -T /tmp/changed.list -cf - 2>/tmp/tar.err \
+              | tar -xf - -C "$DEST" --no-same-owner
+            grep -v 'Removing leading' /tmp/tar.err | head -5 || true
+          fi
+
+          # 3) Propagate deletions: files we restored earlier that you have since deleted.
+          if [ -s /tmp/restored.list ]; then
+            sudo bash -c 'while IFS= read -r -d "" f; do [ -e "$f" ] || [ -L "$f" ] || printf "%s\0" "$f"; done' \
+              < /tmp/restored.list > /tmp/deleted.list
+            while IFS= read -r -d '' f; do rm -f -- "$DEST$f"; done < /tmp/deleted.list
+          fi
+
+          # 4) Remember apt packages you installed this session.
+          if command -v dpkg-query >/dev/null && [ -f /tmp/pkgs.base ]; then
+            dpkg-query -W -f='${binary:Package}\n' | sort -u > /tmp/pkgs.now
+            { cat "$DEST/_meta/apt-packages.txt" 2>/dev/null; comm -13 /tmp/pkgs.base /tmp/pkgs.now; } \
+              | sort -u | sed '/^$/d' > /tmp/pkgs.merged
+            if [ -s /tmp/pkgs.merged ]; then cp /tmp/pkgs.merged "$DEST/_meta/apt-packages.txt"; fi
+          fi
+
+          # 5) Be transparent about anything too big for GitHub.
+          if [ -s /tmp/skipped.list ]; then
+            sort -u /tmp/skipped.list > "$DEST/_meta/skipped-too-large.txt"
+            echo "WARNING: files over ${MAX_MB} MB were NOT saved:"; cat "$DEST/_meta/skipped-too-large.txt"
+          else
+            rm -f "$DEST/_meta/skipped-too-large.txt"
+          fi
+
+          # 6) Commit + push. Oversized files inside the repo workspace are excluded so one
+          #    giant file can't block every push. -f makes sure .gitignore can't hide vps-data.
+          find . -path ./.git -prune -o -path ./vps-data -prune -o -type f -size +95M -print \
+            | sed 's|^\./|/|' >> .git/info/exclude
           git add -A
+          git add -A -f -- vps-data
           if git diff --cached --quiet; then
             echo "No changes to back up."
             exit 0
           fi
-
           git commit -qm "Auto-backup $(date -u '+%F %T') UTC [skip ci]"
-          # Retry with rebase in case the remote moved (e.g. you pushed from your PC).
           for i in 1 2 3; do
             if git push -q origin "HEAD:${BRANCH}"; then
               echo "Backup pushed to ${BRANCH}"
@@ -86,42 +134,74 @@ jobs:
           cat > /tmp/restore.sh <<'EOF'
           #!/usr/bin/env bash
           set -uo pipefail
+          export LC_ALL=C DEBIAN_FRONTEND=noninteractive
           SRC="$GITHUB_WORKSPACE/vps-data"
-          [ -d "$SRC" ] || { echo "No previous VPS data; fresh start."; exit 0; }
+          ME="$(id -un)"
+          rm -f /tmp/.vps-session-start /tmp/restored.list
 
-          for p in $PERSIST_PATHS; do
-            [ -d "$SRC$p" ] || continue
-            owner="$(id -un):$(id -gn)"; [ "$p" = "/root" ] && owner="root:root"
-            # No --delete: never wipe files the fresh runner image needs.
-            sudo mkdir -p "$p"
-            sudo rsync -a --chown="$owner" "$SRC$p/" "$p/"
-            echo "Restored $p"
-          done
-
-          # Git only tracks the exec bit; SSH refuses keys with loose permissions.
-          fix_ssh() {
-            [ -d "$1" ] || return 0
-            chmod 700 "$1"
-            find "$1" -type f ! -name '*.pub' ! -name known_hosts -exec chmod 600 {} +
-          }
-          fix_ssh "$HOME/.ssh"
-          sudo bash -c '[ -d /root/.ssh ] && chmod 700 /root/.ssh && find /root/.ssh -type f ! -name "*.pub" ! -name known_hosts -exec chmod 600 {} +' || true
-
-          # Optional hook: commit vps-data/startup.sh to reinstall apt packages, start services, etc.
-          if [ -f "$SRC/startup.sh" ]; then
-            echo "Running startup.sh"
-            sudo bash "$SRC/startup.sh" || echo "startup.sh exited non-zero"
+          # Baseline of image packages BEFORE restoring yours (used to detect new installs).
+          if command -v dpkg-query >/dev/null; then
+            dpkg-query -W -f='${binary:Package}\n' | sort -u > /tmp/pkgs.base
           fi
+
+          if [ -d "$SRC" ]; then
+            # 1) Packages first, so your restored configs overwrite package defaults.
+            if [ -s "$SRC/_meta/apt-packages.txt" ]; then
+              echo "Reinstalling apt packages..."
+              sudo apt-get update -qq || true
+              sudo xargs -a "$SRC/_meta/apt-packages.txt" apt-get install -y -qq \
+                -o Dpkg::Options::=--force-confold || echo "Some packages failed to install"
+            fi
+
+            # 2) Files. Only files/symlinks are extracted (never directory entries), so
+            #    permissions of existing system dirs like /root are not touched.
+            (cd "$SRC" && find . \( -type f -o -type l \) ! -path './_meta/*' ! -path ./startup.sh -print0) > /tmp/restore-files.list
+            if [ -s /tmp/restore-files.list ]; then
+              tar -C "$SRC" --null --no-recursion -T /tmp/restore-files.list -cf - \
+                | sudo tar -xf - -C / --no-same-owner
+              # Git doesn't keep owners: runner's home goes back to runner, the rest is root's.
+              if [ -d "$SRC/home/runner" ] && [ -d /home/runner ]; then
+                for e in "$SRC"/home/runner/* "$SRC"/home/runner/.[!.]*; do
+                  [ -e "$e" ] && sudo chown -R "$ME:$(id -gn)" "/home/runner/$(basename "$e")"
+                done
+              fi
+              # Record what really landed on disk (used later to detect your deletions).
+              sed -z 's|^\.||' /tmp/restore-files.list \
+                | sudo bash -c 'while IFS= read -r -d "" f; do { [ -e "$f" ] || [ -L "$f" ]; } && printf "%s\0" "$f"; done' \
+                > /tmp/restored.list
+              echo "Restored $(tr -cd '\0' < /tmp/restored.list | wc -c) files."
+            fi
+
+            # Git only keeps the exec bit; SSH refuses keys with loose permissions.
+            fix_ssh() { [ -d "$1" ] && chmod 700 "$1" && find "$1" -type f ! -name '*.pub' ! -name known_hosts -exec chmod 600 {} + ; return 0; }
+            fix_ssh "$HOME/.ssh"
+            sudo bash -c '[ -d /root/.ssh ] && chmod 700 /root/.ssh && find /root/.ssh -type f ! -name "*.pub" ! -name known_hosts -exec chmod 600 {} +' || true
+
+            # 3) Optional hook for anything else (services, kernel settings...).
+            if [ -f "$SRC/startup.sh" ]; then
+              echo "Running startup.sh"
+              sudo bash "$SRC/startup.sh" || echo "startup.sh exited non-zero"
+            fi
+          else
+            echo "No previous VPS data; fresh start."
+          fi
+
+          # Everything from here on counts as "created in this session". The marker is set 1s in the
+          # past so files written in the first instant (coarse kernel timestamps) are never missed;
+          # re-saving a just-restored file is harmless because the content is identical.
+          sleep 2
+          touch -d '1 second ago' /tmp/.vps-session-start
           EOF
 
           chmod +x /tmp/backup.sh /tmp/restore.sh
 
-      - name: Restore previous VPS state
-        run: /tmp/restore.sh
+      - name: Install SSHX and restore previous VPS state
+        run: |
+          curl -sSf https://sshx.io/get | sh -s install
+          /tmp/restore.sh
 
       - name: Start SSHX VPS with periodic auto-backup
         run: |
-          # Background backup loop (stops when this step ends).
           (
             while true; do
               sleep 300
@@ -129,14 +209,11 @@ jobs:
             done
           ) &
 
-          curl -sSf https://sshx.io/get | sh -s install
-
           echo "====================================="
           echo "STARTING SSHX VPS..."
           echo "YOUR SSHX LINK WILL APPEAR BELOW:"
           echo "====================================="
 
-          # Exit gracefully before the job timeout so the final backup step always runs.
           timeout 335m sshx || true
 
       # Runs on success, failure, timeout, or manual cancel.
