@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# ariznodes — control the ArizNodes VPS bot
+DIR="/root"; SVC=ariznodes-vpsbot; export PATH=$PATH:/snap/bin
+if [ -t 1 ]; then O=$'\e[38;5;208m'; D=$'\e[2m'; N=$'\e[0m'; B=$'\e[1m'; else O=; D=; N=; B=; fi
+envv() { grep -E "^$1=" "$DIR/.env" 2>/dev/null | head -1 | cut -d= -f2- | sed "s/^['\"]//; s/['\"]\$//"; }
+need_root() { [ "$(id -u)" = 0 ] || { echo "Run as root:  sudo ariznodes $1"; exit 1; }; }
+case "$1" in
+  status)  systemctl status $SVC --no-pager -l 2>&1 | head -14 ;;
+  start|stop|restart) need_root "$1"; systemctl "$1" $SVC && echo "${O}✔${N} $1 ok" ;;
+  logs)    journalctl -u $SVC -n "${2:-60}" --no-pager ;;
+  follow)  journalctl -fu $SVC ;;
+  env)     need_root env; ${EDITOR:-nano} "$DIR/.env" && echo "Saved. Apply with:  ariznodes restart" ;;
+  doctor)  bash "$DIR/doctor.sh" "$2" ;;
+  netfix)  need_root netfix; echo "${B}Repairing container networking…${N}"; bash "$DIR/netfix.sh" ;;
+  web)     P="$(envv DASH_PORT)"; P="${P:-8787}"; U="$(envv DASH_URL)"
+           echo "${B}Website${N}"; echo "  local   : http://127.0.0.1:$P"; [ -n "$U" ] && echo "  public  : $U"
+           echo "  Discord login redirect URL → ${U:-https://YOUR-DOMAIN}/auth/callback"
+           echo "  Cloudflare Tunnel service URL → http://localhost:$P  (type HTTP)"
+           echo "  from your PC:  ssh -L $P:127.0.0.1:$P root@YOUR_SERVER_IP" ;;
+  update)  need_root update; [ -f "$2" ] || { echo "Usage: ariznodes update /path/to/ariznodes-vps-bundle-v4.sh"; exit 1; }; cd "$DIR" && bash "$2" --upgrade ;;
+  uninstall) need_root uninstall; read -r -p "Remove the service and CLI? VPS and data stay. [y/N] " a; [ "$a" = y ] || exit 0
+           systemctl disable --now $SVC ariznodes-netfix 2>/dev/null; rm -f /etc/systemd/system/$SVC.service /etc/systemd/system/ariznodes-netfix.service /usr/local/bin/ariznodes; systemctl daemon-reload; echo "Removed. Files remain in $DIR" ;;
+  *) cat <<HELP
+${O}${B}ariznodes${N} — ArizNodes VPS bot control
+  ${B}status${N}            service status
+  ${B}start|stop|restart${N}  control the bot
+  ${B}logs [n]${N}          last n log lines     ${D}(follow = live)${N}
+  ${B}env${N}               edit settings (.env)
+  ${B}doctor [--quick]${N}  full health check
+  ${B}netfix${N}            repair container internet (Docker/ufw/NAT)
+  ${B}web${N}               website address & Cloudflare/Discord hints
+  ${B}update <bundle>${N}   upgrade from a new bundle file
+  ${B}uninstall${N}         remove service (keeps your VPS)
+HELP
+  ;;
+esac
