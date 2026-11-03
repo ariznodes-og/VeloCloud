@@ -171,3 +171,37 @@
 [2026-11-03 09:29:51Z INFO JobDispatcher] Successfully renew job 9c6fa8f2-af7d-57e0-b990-ca1dd00923e8, job is valid till 11/03/2026 10:14:51
 [2026-11-03 09:30:51Z INFO JobDispatcher] Successfully renew job 9c6fa8f2-af7d-57e0-b990-ca1dd00923e8, job is valid till 11/03/2026 10:15:51
 [2026-11-03 09:31:51Z INFO JobDispatcher] Successfully renew job 9c6fa8f2-af7d-57e0-b990-ca1dd00923e8, job is valid till 11/03/2026 10:16:51
+[2026-11-03 09:32:51Z INFO JobDispatcher] Successfully renew job 9c6fa8f2-af7d-57e0-b990-ca1dd00923e8, job is valid till 11/03/2026 10:17:51
+[2026-11-03 09:33:54Z ERR  GitHubActionsService] POST request to https://run-actions-1-azure-eastus.actions.githubusercontent.com/38/renewjob failed. System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithNtAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean isProxyAuth, HttpConnection connection, HttpConnectionPool connectionPool, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at GitHub.Services.Common.RawHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpRetryMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+[2026-11-03 09:33:54Z ERR  RunServer] Catch exception during request
+[2026-11-03 09:33:54Z ERR  RunServer] System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at GitHub.Services.Common.VssHttpRetryMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Sdk.WebApi.WebApi.RawHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at Sdk.WebApi.WebApi.RawHttpClientBase.SendAsync[T](HttpRequestMessage message, Boolean readErrorBody, Object userState, CancellationToken cancellationToken)
+   at Sdk.WebApi.WebApi.RawHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Uri requestUri, HttpContent content, IEnumerable`1 queryParameters, Boolean readErrorBody, Object userState, CancellationToken cancellationToken)
+   at GitHub.Actions.RunService.WebApi.RunServiceHttpClient.RenewJobAsync(Uri requestUri, Guid planId, Guid jobId, CancellationToken cancellationToken)
+   at GitHub.Runner.Common.RunServer.<>c__DisplayClass8_0.<<RenewJobAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at GitHub.Runner.Common.RunnerService.RetryRequest[T](Func`1 func, CancellationToken cancellationToken, Int32 maxAttempts, Func`2 shouldRetry)
+[2026-11-03 09:33:54Z ERR  RunServer] #####################################################
+[2026-11-03 09:33:54Z ERR  RunServer] System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+[2026-11-03 09:33:54Z WARN RunServer] Back off 9.325 seconds before next retry. 4 attempt left.
+[2026-11-03 09:34:04Z INFO JobDispatcher] Successfully renew job 9c6fa8f2-af7d-57e0-b990-ca1dd00923e8, job is valid till 11/03/2026 10:19:04
+[2026-11-03 09:35:04Z INFO JobDispatcher] Successfully renew job 9c6fa8f2-af7d-57e0-b990-ca1dd00923e8, job is valid till 11/03/2026 10:20:04
+[2026-11-03 09:36:04Z INFO JobDispatcher] Successfully renew job 9c6fa8f2-af7d-57e0-b990-ca1dd00923e8, job is valid till 11/03/2026 10:21:04
+[2026-11-03 09:37:04Z INFO JobDispatcher] Successfully renew job 9c6fa8f2-af7d-57e0-b990-ca1dd00923e8, job is valid till 11/03/2026 10:22:04
