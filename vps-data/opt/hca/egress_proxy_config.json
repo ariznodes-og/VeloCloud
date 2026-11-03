@@ -1,0 +1,1 @@
+{"defaults":{"actions-proxy":"20.29.134.25:443","addr":"127.0.0.100:53","enabled":"false","intercepts":"api.github.com=127.0.0.2:443"},"overrides":{"internal":{"enabled":"true"}}}
