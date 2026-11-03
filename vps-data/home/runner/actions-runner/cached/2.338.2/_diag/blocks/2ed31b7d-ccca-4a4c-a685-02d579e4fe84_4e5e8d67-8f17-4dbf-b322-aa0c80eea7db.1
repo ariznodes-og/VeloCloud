@@ -1,0 +1,46 @@
+﻿2026-11-03T09:01:37.7647980Z ##[group]Run # Background backup loop (stops when this step ends).
+2026-11-03T09:01:37.7648387Z [36;1m# Background backup loop (stops when this step ends).[0m
+2026-11-03T09:01:37.7648638Z [36;1m([0m
+2026-11-03T09:01:37.7648802Z [36;1m  while true; do[0m
+2026-11-03T09:01:37.7648988Z [36;1m    sleep 300[0m
+2026-11-03T09:01:37.7649183Z [36;1m    /tmp/backup.sh || true[0m
+2026-11-03T09:01:37.7649394Z [36;1m  done[0m
+2026-11-03T09:01:37.7649556Z [36;1m) &[0m
+2026-11-03T09:01:37.7649728Z [36;1m[0m
+2026-11-03T09:01:37.7649945Z [36;1mcurl -sSf https://sshx.io/get | sh -s install[0m
+2026-11-03T09:01:37.7650181Z [36;1m[0m
+2026-11-03T09:01:37.7650363Z [36;1mecho "====================================="[0m
+2026-11-03T09:01:37.7650604Z [36;1mecho "STARTING SSHX VPS..."[0m
+2026-11-03T09:01:37.7650842Z [36;1mecho "YOUR SSHX LINK WILL APPEAR BELOW:"[0m
+2026-11-03T09:01:37.7651092Z [36;1mecho "====================================="[0m
+2026-11-03T09:01:37.7651308Z [36;1m[0m
+2026-11-03T09:01:37.7651589Z [36;1m# Exit gracefully before the job timeout so the final backup step always runs.[0m
+2026-11-03T09:01:37.7651910Z [36;1mtimeout 335m sshx || true[0m
+2026-11-03T09:01:37.7670314Z shell: /usr/bin/bash -e {0}
+2026-11-03T09:01:37.7670526Z env:
+2026-11-03T09:01:37.7670686Z   BRANCH: main
+2026-11-03T09:01:37.7670879Z   PERSIST_PATHS: /home/runner /root /opt /srv
+2026-11-03T09:01:37.7671115Z ##[endgroup]
+2026-11-03T09:01:37.8177612Z [0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
+2026-11-03T09:01:37.8223100Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-11-03T09:01:37.8223715Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-11-03T09:01:37.8224001Z 
+2026-11-03T09:01:37.9639338Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-11-03T09:01:37.9674687Z 100 2869k  100 2869k    0     0  19.7M      0 --:--:-- --:--:-- --:--:-- 19.8M
+2026-11-03T09:01:37.9675063Z 
+2026-11-03T09:01:37.9675629Z [0m[35;1m↯ Adding sshx binary to [4m/usr/local/bin[0m
+2026-11-03T09:01:38.0200980Z 
+2026-11-03T09:01:38.0201650Z [0m[35;1m↯ Done! You can now run sshx.[0m
+2026-11-03T09:01:38.0203227Z =====================================
+2026-11-03T09:01:38.0203639Z STARTING SSHX VPS...
+2026-11-03T09:01:38.0203918Z YOUR SSHX LINK WILL APPEAR BELOW:
+2026-11-03T09:01:38.0204213Z =====================================
+2026-11-03T09:01:38.0497164Z 
+2026-11-03T09:01:38.0498469Z   [1;32msshx[0m [32mv0.4.1[0m
+2026-11-03T09:01:38.0498797Z 
+2026-11-03T09:01:38.0499347Z   [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/0uRoMteogq#0vQuJDEiEyQXZw[0m
+2026-11-03T09:01:38.0499946Z   [32m➜[0m  Shell: [38;5;8m/bin/bash[0m
+2026-11-03T09:06:43.0719649Z 
+2026-11-03T09:06:43.0720344Z Backup pushed to main
+2026-11-03T09:11:45.7264471Z Backup pushed to main
+2026-11-03T09:14:38.1443930Z ##[error]The operation was canceled.

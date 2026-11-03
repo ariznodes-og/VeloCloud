@@ -165,3 +165,11 @@
 [2026-11-03 09:09:20Z INFO JobDispatcher] Successfully renew job 594ee9ed-f57a-5c6d-b243-3284d2e81f3f, job is valid till 11/03/2026 09:54:20
 [2026-11-03 09:10:20Z INFO JobDispatcher] Successfully renew job 594ee9ed-f57a-5c6d-b243-3284d2e81f3f, job is valid till 11/03/2026 09:55:20
 [2026-11-03 09:11:20Z INFO JobDispatcher] Successfully renew job 594ee9ed-f57a-5c6d-b243-3284d2e81f3f, job is valid till 11/03/2026 09:56:20
+[2026-11-03 09:12:20Z INFO JobDispatcher] Successfully renew job 594ee9ed-f57a-5c6d-b243-3284d2e81f3f, job is valid till 11/03/2026 09:57:20
+[2026-11-03 09:13:20Z INFO JobDispatcher] Successfully renew job 594ee9ed-f57a-5c6d-b243-3284d2e81f3f, job is valid till 11/03/2026 09:58:20
+[2026-11-03 09:14:20Z INFO JobDispatcher] Successfully renew job 594ee9ed-f57a-5c6d-b243-3284d2e81f3f, job is valid till 11/03/2026 09:59:20
+[2026-11-03 09:14:25Z INFO JobDispatcher] Job cancellation request 594ee9ed-f57a-5c6d-b243-3284d2e81f3f received, cancellation timeout 5 minutes.
+[2026-11-03 09:14:25Z INFO JobDispatcher] Send job cancellation message to worker for job 594ee9ed-f57a-5c6d-b243-3284d2e81f3f.
+[2026-11-03 09:14:25Z INFO ProcessChannel] Sending message of length 0, with hash 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+[2026-11-03 09:14:25Z INFO JobDispatcher] Job cancellation request 594ee9ed-f57a-5c6d-b243-3284d2e81f3f received, cancellation timeout 5 minutes.
+[2026-11-03 09:14:25Z INFO JobDispatcher] Job cancellation request 594ee9ed-f57a-5c6d-b243-3284d2e81f3f received, cancellation timeout 5 minutes.
