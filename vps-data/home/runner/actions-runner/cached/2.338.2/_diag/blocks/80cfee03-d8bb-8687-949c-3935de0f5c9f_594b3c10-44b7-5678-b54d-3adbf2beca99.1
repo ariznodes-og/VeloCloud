@@ -1,0 +1,448 @@
+﻿2026-11-04T04:42:26.7580680Z Current runner version: '2.338.2'
+2026-11-04T04:42:26.7607916Z ##[group]Runner Image Provisioner
+2026-11-04T04:42:26.7608865Z Hosted Compute Agent
+2026-11-04T04:42:26.7609444Z Version: 20261028.624
+2026-11-04T04:42:26.7610217Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-04T04:42:26.7611007Z Build Date: 2026-10-28T21:51:42Z
+2026-11-04T04:42:26.7611756Z Worker ID: {7611692c-8862-41c1-b538-d05bc6eab68d}
+2026-11-04T04:42:26.7612501Z Region: westus
+2026-11-04T04:42:26.7613038Z Cloud: Azure
+2026-11-04T04:42:26.7613644Z ##[endgroup]
+2026-11-04T04:42:26.7615137Z ##[group]Operating System
+2026-11-04T04:42:26.7615846Z Ubuntu
+2026-11-04T04:42:26.7616431Z 24.04.5
+2026-11-04T04:42:26.7617432Z LTS
+2026-11-04T04:42:26.7618096Z ##[endgroup]
+2026-11-04T04:42:26.7618663Z ##[group]Runner Image
+2026-11-04T04:42:26.7619315Z Image: ubuntu-24.04
+2026-11-04T04:42:26.7619950Z Version: 20261101.360.1
+2026-11-04T04:42:26.7621260Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-04T04:42:26.7622833Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-04T04:42:26.7623829Z ##[endgroup]
+2026-11-04T04:42:26.7624972Z ##[group]GITHUB_TOKEN Permissions
+2026-11-04T04:42:26.7627578Z Contents: write
+2026-11-04T04:42:26.7628329Z Metadata: read
+2026-11-04T04:42:26.7628896Z ##[endgroup]
+2026-11-04T04:42:26.7631470Z Secret source: Actions
+2026-11-04T04:42:26.7632442Z Cache mode: write
+2026-11-04T04:42:26.7633456Z Prepare workflow directory
+2026-11-04T04:42:26.8173611Z Prepare all required actions
+2026-11-04T04:42:26.8222632Z Getting action download info
+2026-11-04T04:42:27.1509750Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-04T04:42:27.3537974Z Complete job name: Build-VPS
+2026-11-04T04:42:27.4608228Z ##[group]Run actions/checkout@v4
+2026-11-04T04:42:27.4609132Z with:
+2026-11-04T04:42:27.4609561Z   ref: main
+2026-11-04T04:42:27.4609986Z   fetch-depth: 0
+2026-11-04T04:42:27.4613742Z   token: ***
+2026-11-04T04:42:27.4614209Z   repository: ariznodes-og/VeloCloud
+2026-11-04T04:42:27.4614771Z   ssh-strict: true
+2026-11-04T04:42:27.4615270Z   ssh-user: git
+2026-11-04T04:42:27.4615788Z   persist-credentials: true
+2026-11-04T04:42:27.4616355Z   clean: true
+2026-11-04T04:42:27.4617226Z   sparse-checkout-cone-mode: true
+2026-11-04T04:42:27.4617771Z   fetch-tags: false
+2026-11-04T04:42:27.4618218Z   show-progress: true
+2026-11-04T04:42:27.4618673Z   lfs: false
+2026-11-04T04:42:27.4619096Z   submodules: false
+2026-11-04T04:42:27.4619549Z   set-safe-directory: true
+2026-11-04T04:42:27.4620061Z   allow-unsafe-pr-checkout: false
+2026-11-04T04:42:27.4620891Z env:
+2026-11-04T04:42:27.4621311Z   BRANCH: main
+2026-11-04T04:42:27.4621750Z   SCAN_ROOTS: / /mnt
+2026-11-04T04:42:27.4622346Z   MAX_MB: 90
+2026-11-04T04:42:27.4622769Z ##[endgroup]
+2026-11-04T04:42:27.7530280Z Syncing repository: ariznodes-og/VeloCloud
+2026-11-04T04:42:27.7533114Z ##[group]Getting Git version info
+2026-11-04T04:42:27.7534253Z Working directory is '/home/runner/work/VeloCloud/VeloCloud'
+2026-11-04T04:42:27.7535959Z [command]/usr/bin/git version
+2026-11-04T04:42:27.7650397Z git version 2.56.0
+2026-11-04T04:42:27.7684731Z ##[endgroup]
+2026-11-04T04:42:27.7694069Z Temporarily overriding HOME='/home/runner/work/_temp/7d9be2b9-8ced-4ee8-87ff-f23e033960c1' before making global git config changes
+2026-11-04T04:42:27.7698074Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T04:42:27.7700868Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/VeloCloud/VeloCloud
+2026-11-04T04:42:27.7754441Z Deleting the contents of '/home/runner/work/VeloCloud/VeloCloud'
+2026-11-04T04:42:27.7759854Z ##[group]Initializing the repository
+2026-11-04T04:42:27.7764814Z [command]/usr/bin/git init /home/runner/work/VeloCloud/VeloCloud
+2026-11-04T04:42:27.7903862Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-04T04:42:27.7906816Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-04T04:42:27.7909263Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-04T04:42:27.7911007Z hint: call:
+2026-11-04T04:42:27.7911828Z hint:
+2026-11-04T04:42:27.7912812Z hint: 	git config --global init.defaultBranch <name>
+2026-11-04T04:42:27.7914315Z hint:
+2026-11-04T04:42:27.7915933Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-04T04:42:27.7918577Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-04T04:42:27.7920525Z hint:
+2026-11-04T04:42:27.7921758Z hint: 	git branch -m <name>
+2026-11-04T04:42:27.7923052Z hint:
+2026-11-04T04:42:27.7924638Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-04T04:42:27.7927699Z Initialized empty Git repository in /home/runner/work/VeloCloud/VeloCloud/.git/
+2026-11-04T04:42:27.7933552Z [command]/usr/bin/git remote add origin https://github.com/ariznodes-og/VeloCloud
+2026-11-04T04:42:27.7983526Z ##[endgroup]
+2026-11-04T04:42:27.7985507Z ##[group]Disabling automatic garbage collection
+2026-11-04T04:42:27.7987501Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-04T04:42:27.8024297Z ##[endgroup]
+2026-11-04T04:42:27.8025910Z ##[group]Setting up auth
+2026-11-04T04:42:27.8032311Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T04:42:27.8073911Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T04:42:27.8539359Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T04:42:27.8593318Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T04:42:27.8900913Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T04:42:27.8950581Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T04:42:27.9195986Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-04T04:42:27.9245887Z ##[endgroup]
+2026-11-04T04:42:27.9247710Z ##[group]Fetching the repository
+2026-11-04T04:42:27.9260492Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-11-04T04:42:54.5770795Z From https://github.com/ariznodes-og/VeloCloud
+2026-11-04T04:42:54.5771407Z  * [new branch]          main       -> origin/main
+2026-11-04T04:42:54.5778843Z ##[endgroup]
+2026-11-04T04:42:54.5779489Z ##[group]Determining the checkout info
+2026-11-04T04:42:54.5786069Z [command]/usr/bin/git branch --list --remote origin/main
+2026-11-04T04:42:54.5824517Z   origin/main
+2026-11-04T04:42:54.5830462Z ##[endgroup]
+2026-11-04T04:42:54.5836238Z [command]/usr/bin/git sparse-checkout disable
+2026-11-04T04:42:54.5903891Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-04T04:42:54.5942707Z ##[group]Checking out the ref
+2026-11-04T04:42:54.5950169Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-04T04:42:55.8147735Z Updating files:   0% (662/73790)
+2026-11-04T04:42:56.0487473Z Updating files:   1% (738/73790)
+2026-11-04T04:42:56.1057119Z Updating files:   2% (1476/73790)
+2026-11-04T04:42:56.2561940Z Updating files:   3% (2214/73790)
+2026-11-04T04:42:56.3607948Z Updating files:   4% (2952/73790)
+2026-11-04T04:42:56.4258333Z Updating files:   5% (3690/73790)
+2026-11-04T04:42:56.5189221Z Updating files:   6% (4428/73790)
+2026-11-04T04:42:56.6396183Z Updating files:   7% (5166/73790)
+2026-11-04T04:42:56.6745847Z Updating files:   8% (5904/73790)
+2026-11-04T04:42:56.7155991Z Updating files:   8% (6239/73790)
+2026-11-04T04:42:56.7746287Z Updating files:   9% (6642/73790)
+2026-11-04T04:42:56.8291004Z Updating files:  10% (7379/73790)
+2026-11-04T04:42:56.8788984Z Updating files:  11% (8117/73790)
+2026-11-04T04:42:56.9469700Z Updating files:  12% (8855/73790)
+2026-11-04T04:42:57.0268419Z Updating files:  13% (9593/73790)
+2026-11-04T04:42:57.0968422Z Updating files:  14% (10331/73790)
+2026-11-04T04:42:57.1549110Z Updating files:  15% (11069/73790)
+2026-11-04T04:42:57.2078520Z Updating files:  16% (11807/73790)
+2026-11-04T04:42:57.2614453Z Updating files:  17% (12545/73790)
+2026-11-04T04:42:57.3227858Z Updating files:  18% (13283/73790)
+2026-11-04T04:42:57.3822838Z Updating files:  19% (14021/73790)
+2026-11-04T04:42:57.4417399Z Updating files:  20% (14758/73790)
+2026-11-04T04:42:57.5211808Z Updating files:  21% (15496/73790)
+2026-11-04T04:42:57.6264819Z Updating files:  22% (16234/73790)
+2026-11-04T04:42:57.6746259Z Updating files:  23% (16972/73790)
+2026-11-04T04:42:57.7116547Z Updating files:  23% (17329/73790)
+2026-11-04T04:42:57.7801079Z Updating files:  24% (17710/73790)
+2026-11-04T04:42:57.8388059Z Updating files:  25% (18448/73790)
+2026-11-04T04:42:57.8889437Z Updating files:  26% (19186/73790)
+2026-11-04T04:42:57.9487287Z Updating files:  27% (19924/73790)
+2026-11-04T04:42:58.0309978Z Updating files:  28% (20662/73790)
+2026-11-04T04:42:58.1071992Z Updating files:  29% (21400/73790)
+2026-11-04T04:42:58.1558340Z Updating files:  30% (22137/73790)
+2026-11-04T04:42:58.2916888Z Updating files:  31% (22875/73790)
+2026-11-04T04:42:58.3501276Z Updating files:  32% (23613/73790)
+2026-11-04T04:42:58.4117053Z Updating files:  33% (24351/73790)
+2026-11-04T04:42:58.4777062Z Updating files:  34% (25089/73790)
+2026-11-04T04:42:58.5445642Z Updating files:  35% (25827/73790)
+2026-11-04T04:42:58.5991620Z Updating files:  36% (26565/73790)
+2026-11-04T04:42:58.6663796Z Updating files:  37% (27303/73790)
+2026-11-04T04:42:58.6745118Z Updating files:  38% (28041/73790)
+2026-11-04T04:42:59.7275279Z Updating files:  38% (28097/73790)
+2026-11-04T04:43:00.2159557Z Updating files:  38% (28461/73790)
+2026-11-04T04:43:00.6749330Z Updating files:  39% (28779/73790)
+2026-11-04T04:43:01.1986284Z Updating files:  39% (29054/73790)
+2026-11-04T04:43:01.2697302Z Updating files:  40% (29516/73790)
+2026-11-04T04:43:01.3383798Z Updating files:  41% (30254/73790)
+2026-11-04T04:43:01.3997678Z Updating files:  42% (30992/73790)
+2026-11-04T04:43:01.4773116Z Updating files:  43% (31730/73790)
+2026-11-04T04:43:01.5889546Z Updating files:  44% (32468/73790)
+2026-11-04T04:43:01.6592902Z Updating files:  45% (33206/73790)
+2026-11-04T04:43:01.6745279Z Updating files:  46% (33944/73790)
+2026-11-04T04:43:01.7248803Z Updating files:  46% (34085/73790)
+2026-11-04T04:43:01.7693527Z Updating files:  47% (34682/73790)
+2026-11-04T04:43:01.8331683Z Updating files:  48% (35420/73790)
+2026-11-04T04:43:01.8792624Z Updating files:  49% (36158/73790)
+2026-11-04T04:43:01.9341188Z Updating files:  50% (36895/73790)
+2026-11-04T04:43:01.9898505Z Updating files:  51% (37633/73790)
+2026-11-04T04:43:02.0334699Z Updating files:  52% (38371/73790)
+2026-11-04T04:43:02.0738642Z Updating files:  53% (39109/73790)
+2026-11-04T04:43:02.1186448Z Updating files:  54% (39847/73790)
+2026-11-04T04:43:02.1655461Z Updating files:  55% (40585/73790)
+2026-11-04T04:43:02.2600806Z Updating files:  56% (41323/73790)
+2026-11-04T04:43:02.3275614Z Updating files:  57% (42061/73790)
+2026-11-04T04:43:02.3930013Z Updating files:  58% (42799/73790)
+2026-11-04T04:43:02.4523834Z Updating files:  59% (43537/73790)
+2026-11-04T04:43:02.5229819Z Updating files:  60% (44274/73790)
+2026-11-04T04:43:02.5811027Z Updating files:  61% (45012/73790)
+2026-11-04T04:43:02.6407992Z Updating files:  62% (45750/73790)
+2026-11-04T04:43:02.6746170Z Updating files:  63% (46488/73790)
+2026-11-04T04:43:02.7092834Z Updating files:  63% (46814/73790)
+2026-11-04T04:43:02.7641366Z Updating files:  64% (47226/73790)
+2026-11-04T04:43:02.8046250Z Updating files:  65% (47964/73790)
+2026-11-04T04:43:03.0861824Z Updating files:  66% (48702/73790)
+2026-11-04T04:43:03.1402145Z Updating files:  67% (49440/73790)
+2026-11-04T04:43:03.1867914Z Updating files:  68% (50178/73790)
+2026-11-04T04:43:03.2856513Z Updating files:  69% (50916/73790)
+2026-11-04T04:43:03.3418496Z Updating files:  70% (51653/73790)
+2026-11-04T04:43:03.3984185Z Updating files:  71% (52391/73790)
+2026-11-04T04:43:03.4456359Z Updating files:  72% (53129/73790)
+2026-11-04T04:43:03.5118231Z Updating files:  73% (53867/73790)
+2026-11-04T04:43:03.5858858Z Updating files:  74% (54605/73790)
+2026-11-04T04:43:03.6648586Z Updating files:  75% (55343/73790)
+2026-11-04T04:43:03.6745720Z Updating files:  76% (56081/73790)
+2026-11-04T04:43:03.7222203Z Updating files:  76% (56195/73790)
+2026-11-04T04:43:03.7699819Z Updating files:  77% (56819/73790)
+2026-11-04T04:43:03.8207028Z Updating files:  78% (57557/73790)
+2026-11-04T04:43:03.8752063Z Updating files:  79% (58295/73790)
+2026-11-04T04:43:03.9151103Z Updating files:  80% (59032/73790)
+2026-11-04T04:43:03.9563024Z Updating files:  81% (59770/73790)
+2026-11-04T04:43:03.9928789Z Updating files:  82% (60508/73790)
+2026-11-04T04:43:04.0606178Z Updating files:  83% (61246/73790)
+2026-11-04T04:43:04.1161095Z Updating files:  84% (61984/73790)
+2026-11-04T04:43:04.1591308Z Updating files:  85% (62722/73790)
+2026-11-04T04:43:04.2021015Z Updating files:  86% (63460/73790)
+2026-11-04T04:43:04.2487005Z Updating files:  87% (64198/73790)
+2026-11-04T04:43:04.3064703Z Updating files:  88% (64936/73790)
+2026-11-04T04:43:04.3563631Z Updating files:  89% (65674/73790)
+2026-11-04T04:43:04.4616080Z Updating files:  90% (66411/73790)
+2026-11-04T04:43:04.6563624Z Updating files:  91% (67149/73790)
+2026-11-04T04:43:04.6744704Z Updating files:  92% (67887/73790)
+2026-11-04T04:43:04.6957581Z Updating files:  92% (68228/73790)
+2026-11-04T04:43:04.7352216Z Updating files:  93% (68625/73790)
+2026-11-04T04:43:04.7807439Z Updating files:  94% (69363/73790)
+2026-11-04T04:43:04.8202902Z Updating files:  95% (70101/73790)
+2026-11-04T04:43:04.8591237Z Updating files:  96% (70839/73790)
+2026-11-04T04:43:04.8980210Z Updating files:  97% (71577/73790)
+2026-11-04T04:43:05.0572202Z Updating files:  98% (72315/73790)
+2026-11-04T04:43:05.1263386Z Updating files:  99% (73053/73790)
+2026-11-04T04:43:05.1264035Z Updating files: 100% (73790/73790)
+2026-11-04T04:43:05.1264489Z Updating files: 100% (73790/73790), done.
+2026-11-04T04:43:05.2228685Z Switched to a new branch 'main'
+2026-11-04T04:43:05.2231060Z branch 'main' set up to track 'origin/main'.
+2026-11-04T04:43:05.2551618Z ##[endgroup]
+2026-11-04T04:43:05.2617987Z [command]/usr/bin/git log -1 --format=%H
+2026-11-04T04:43:05.2662095Z c037a2be4112a61af9e541f4c610c4e23c7d33ab
+2026-11-04T04:43:05.2905826Z ##[group]Run git config --global user.name "VPS Auto-Saver"
+2026-11-04T04:43:05.2906355Z [36;1mgit config --global user.name "VPS Auto-Saver"[0m
+2026-11-04T04:43:05.2907131Z [36;1mgit config --global user.email "vps@autosaver.com"[0m
+2026-11-04T04:43:05.2907530Z [36;1mgit config --global pull.rebase true[0m
+2026-11-04T04:43:05.2907965Z [36;1mgit config --global --add safe.directory "$GITHUB_WORKSPACE"[0m
+2026-11-04T04:43:05.2931818Z shell: /usr/bin/bash -e {0}
+2026-11-04T04:43:05.2932090Z env:
+2026-11-04T04:43:05.2932283Z   BRANCH: main
+2026-11-04T04:43:05.2932490Z   SCAN_ROOTS: / /mnt
+2026-11-04T04:43:05.2932703Z   MAX_MB: 90
+2026-11-04T04:43:05.2932896Z ##[endgroup]
+2026-11-04T04:43:05.3200228Z ##[group]Run cat > /tmp/backup.sh <<'EOF'
+2026-11-04T04:43:05.3200974Z [36;1mcat > /tmp/backup.sh <<'EOF'[0m
+2026-11-04T04:43:05.3201254Z [36;1m#!/usr/bin/env bash[0m
+2026-11-04T04:43:05.3201685Z [36;1m# Saves every file created/changed since the session started, anywhere on the VPS.[0m
+2026-11-04T04:43:05.3202153Z [36;1mset -uo pipefail[0m
+2026-11-04T04:43:05.3202395Z [36;1mexport LC_ALL=C[0m
+2026-11-04T04:43:05.3202633Z [36;1mcd "$GITHUB_WORKSPACE"[0m
+2026-11-04T04:43:05.3202924Z [36;1mDEST="$GITHUB_WORKSPACE/vps-data"[0m
+2026-11-04T04:43:05.3203226Z [36;1mMARK=/tmp/.vps-session-start[0m
+2026-11-04T04:43:05.3203934Z [36;1m[ -f "$MARK" ] || { echo "Session marker missing (restore did not finish); skipping backup."; exit 0; }[0m
+2026-11-04T04:43:05.3204440Z [36;1mmkdir -p "$DEST/_meta"[0m
+2026-11-04T04:43:05.3204787Z [36;1mrm -f /tmp/changed.list /tmp/skipped.list /tmp/deleted.list[0m
+2026-11-04T04:43:05.3205137Z [36;1m[0m
+2026-11-04T04:43:05.3205482Z [36;1m# 1) Find changed files. -cnewer uses ctime, so files extracted with old[0m
+2026-11-04T04:43:05.3205972Z [36;1m#    timestamps (unzip, tar, git clone) are still detected.[0m
+2026-11-04T04:43:05.3206453Z [36;1m#    Pruned: pseudo-FS, system dirs that the fresh runner image already owns[0m
+2026-11-04T04:43:05.3207350Z [36;1m#    (reinstall those via apt, which is tracked separately), caches, boot-time noise.[0m
+2026-11-04T04:43:05.3207818Z [36;1msudo find $SCAN_ROOTS -xdev \[0m
+2026-11-04T04:43:05.3208264Z [36;1m  \( -path /proc -o -path /sys -o -path /dev -o -path /run -o -path /tmp -o -path /var/tmp \[0m
+2026-11-04T04:43:05.3208903Z [36;1m     -o -path /var/log -o -path /var/cache -o -path /var/lib -o -path /boot -o -path /snap \[0m
+2026-11-04T04:43:05.3209511Z [36;1m     -o -path /lost+found -o -path /bin -o -path /sbin -o -path /lib -o -path /lib32 \[0m
+2026-11-04T04:43:05.3209980Z [36;1m     -o -path /lib64 -o -path /libx32 \[0m
+2026-11-04T04:43:05.3210379Z [36;1m     -o \( -path '/usr/*' ! -path /usr/local ! -path '/usr/local/*' \) \[0m
+2026-11-04T04:43:05.3210780Z [36;1m     -o -path /usr/local/bin/sshx \[0m
+2026-11-04T04:43:05.3211147Z [36;1m     -o -path /home/runner/work -o -path /home/runner/runners \[0m
+2026-11-04T04:43:05.3211639Z [36;1m     -o -path '/home/*/.cache' -o -path '/home/*/.npm' -o -path '/home/*/.cargo' \[0m
+2026-11-04T04:43:05.3212169Z [36;1m     -o -path '/home/*/.rustup' -o -path '/home/*/.dotnet' -o -path '/home/*/.nvm' \[0m
+2026-11-04T04:43:05.3212689Z [36;1m     -o -path '/home/*/.ghcup' -o -path /root/.cache -o -path /root/.npm \[0m
+2026-11-04T04:43:05.3213190Z [36;1m     -o -path /opt/hostedtoolcache -o -path /opt/actionarchivecache \[0m
+2026-11-04T04:43:05.3213666Z [36;1m     -o -path /opt/runner-cache -o -path /opt/post-generation \[0m
+2026-11-04T04:43:05.3214143Z [36;1m     -o -path /etc/resolv.conf -o -path /etc/hosts -o -path /etc/hostname \[0m
+2026-11-04T04:43:05.3214670Z [36;1m     -o -path /etc/machine-id -o -path /etc/mtab -o -path /etc/ld.so.cache \[0m
+2026-11-04T04:43:05.3215183Z [36;1m     -o -path '/etc/passwd*' -o -path '/etc/shadow*' -o -path '/etc/group*' \[0m
+2026-11-04T04:43:05.3215706Z [36;1m     -o -path '/etc/gshadow*' -o -path /etc/alternatives -o -path /etc/ssl/certs \[0m
+2026-11-04T04:43:05.3216137Z [36;1m     -o -path '/etc/ssh/ssh_host_*' \[0m
+2026-11-04T04:43:05.3216475Z [36;1m     -o -name .git -o -name __pycache__ \) -prune -o \[0m
+2026-11-04T04:43:05.3217344Z [36;1m  \( -cnewer "$MARK" -type f -size +"${MAX_MB}M" -fprint /tmp/skipped.list \) -o \[0m
+2026-11-04T04:43:05.3217919Z [36;1m  \( -cnewer "$MARK" \( -type f -o -type l \) -print0 \) > /tmp/changed.list 2>/dev/null[0m
+2026-11-04T04:43:05.3218332Z [36;1m[0m
+2026-11-04T04:43:05.3218700Z [36;1m# 2) Copy them into vps-data/<absolute path>. sudo tar so root-only files are readable.[0m
+2026-11-04T04:43:05.3219163Z [36;1mif [ -s /tmp/changed.list ]; then[0m
+2026-11-04T04:43:05.3219779Z [36;1m  sudo tar --null --no-recursion -T /tmp/changed.list -cf - 2>/tmp/tar.err \[0m
+2026-11-04T04:43:05.3220235Z [36;1m    | tar -xf - -C "$DEST" --no-same-owner[0m
+2026-11-04T04:43:05.3220612Z [36;1m  grep -v 'Removing leading' /tmp/tar.err | head -5 || true[0m
+2026-11-04T04:43:05.3220951Z [36;1mfi[0m
+2026-11-04T04:43:05.3221133Z [36;1m[0m
+2026-11-04T04:43:05.3221468Z [36;1m# 3) Propagate deletions: files we restored earlier that you have since deleted.[0m
+2026-11-04T04:43:05.3221919Z [36;1mif [ -s /tmp/restored.list ]; then[0m
+2026-11-04T04:43:05.3222372Z [36;1m  sudo bash -c 'while IFS= read -r -d "" f; do [ -e "$f" ] || [ -L "$f" ] || printf "%s\0" "$f"; done' \[0m
+2026-11-04T04:43:05.3223028Z [36;1m    < /tmp/restored.list > /tmp/deleted.list[0m
+2026-11-04T04:43:05.3223435Z [36;1m  while IFS= read -r -d '' f; do rm -f -- "$DEST$f"; done < /tmp/deleted.list[0m
+2026-11-04T04:43:05.3223807Z [36;1mfi[0m
+2026-11-04T04:43:05.3223984Z [36;1m[0m
+2026-11-04T04:43:05.3224238Z [36;1m# 4) Remember apt packages you installed this session.[0m
+2026-11-04T04:43:05.3224694Z [36;1mif command -v dpkg-query >/dev/null && [ -f /tmp/pkgs.base ]; then[0m
+2026-11-04T04:43:05.3225177Z [36;1m  dpkg-query -W -f='${binary:Package}\n' | sort -u > /tmp/pkgs.now[0m
+2026-11-04T04:43:05.3225735Z [36;1m  { cat "$DEST/_meta/apt-packages.txt" 2>/dev/null; comm -13 /tmp/pkgs.base /tmp/pkgs.now; } \[0m
+2026-11-04T04:43:05.3226236Z [36;1m    | sort -u | sed '/^$/d' > /tmp/pkgs.merged[0m
+2026-11-04T04:43:05.3227030Z [36;1m  if [ -s /tmp/pkgs.merged ]; then cp /tmp/pkgs.merged "$DEST/_meta/apt-packages.txt"; fi[0m
+2026-11-04T04:43:05.3227467Z [36;1mfi[0m
+2026-11-04T04:43:05.3227647Z [36;1m[0m
+2026-11-04T04:43:05.3227901Z [36;1m# 5) Be transparent about anything too big for GitHub.[0m
+2026-11-04T04:43:05.3228246Z [36;1mif [ -s /tmp/skipped.list ]; then[0m
+2026-11-04T04:43:05.3228624Z [36;1m  sort -u /tmp/skipped.list > "$DEST/_meta/skipped-too-large.txt"[0m
+2026-11-04T04:43:05.3229184Z [36;1m  echo "WARNING: files over ${MAX_MB} MB were NOT saved:"; cat "$DEST/_meta/skipped-too-large.txt"[0m
+2026-11-04T04:43:05.3229665Z [36;1melse[0m
+2026-11-04T04:43:05.3229954Z [36;1m  rm -f "$DEST/_meta/skipped-too-large.txt"[0m
+2026-11-04T04:43:05.3230250Z [36;1mfi[0m
+2026-11-04T04:43:05.3230434Z [36;1m[0m
+2026-11-04T04:43:05.3230780Z [36;1m# 6) Commit + push. Oversized files inside the repo workspace are excluded so one[0m
+2026-11-04T04:43:05.3231354Z [36;1m#    giant file can't block every push. -f makes sure .gitignore can't hide vps-data.[0m
+2026-11-04T04:43:05.3231953Z [36;1mfind . -path ./.git -prune -o -path ./vps-data -prune -o -type f -size +95M -print \[0m
+2026-11-04T04:43:05.3232416Z [36;1m  | sed 's|^\./|/|' >> .git/info/exclude[0m
+2026-11-04T04:43:05.3232705Z [36;1mgit add -A[0m
+2026-11-04T04:43:05.3232931Z [36;1mgit add -A -f -- vps-data[0m
+2026-11-04T04:43:05.3233206Z [36;1mif git diff --cached --quiet; then[0m
+2026-11-04T04:43:05.3233499Z [36;1m  echo "No changes to back up."[0m
+2026-11-04T04:43:05.3233765Z [36;1m  exit 0[0m
+2026-11-04T04:43:05.3233957Z [36;1mfi[0m
+2026-11-04T04:43:05.3234243Z [36;1mgit commit -qm "Auto-backup $(date -u '+%F %T') UTC [skip ci]"[0m
+2026-11-04T04:43:05.3234620Z [36;1mfor i in 1 2 3; do[0m
+2026-11-04T04:43:05.3234906Z [36;1m  if git push -q origin "HEAD:${BRANCH}"; then[0m
+2026-11-04T04:43:05.3235235Z [36;1m    echo "Backup pushed to ${BRANCH}"[0m
+2026-11-04T04:43:05.3235512Z [36;1m    exit 0[0m
+2026-11-04T04:43:05.3235710Z [36;1m  fi[0m
+2026-11-04T04:43:05.3235994Z [36;1m  git pull --rebase -q origin "${BRANCH}" || git rebase --abort[0m
+2026-11-04T04:43:05.3236348Z [36;1m  sleep 5[0m
+2026-11-04T04:43:05.3236551Z [36;1mdone[0m
+2026-11-04T04:43:05.3237001Z [36;1mecho "Push failed after retries; will retry next cycle."[0m
+2026-11-04T04:43:05.3237343Z [36;1mexit 1[0m
+2026-11-04T04:43:05.3237533Z [36;1mEOF[0m
+2026-11-04T04:43:05.3237717Z [36;1m[0m
+2026-11-04T04:43:05.3237915Z [36;1mcat > /tmp/restore.sh <<'EOF'[0m
+2026-11-04T04:43:05.3238184Z [36;1m#!/usr/bin/env bash[0m
+2026-11-04T04:43:05.3238587Z [36;1mset -uo pipefail[0m
+2026-11-04T04:43:05.3238901Z [36;1mexport LC_ALL=C DEBIAN_FRONTEND=noninteractive[0m
+2026-11-04T04:43:05.3239257Z [36;1mSRC="$GITHUB_WORKSPACE/vps-data"[0m
+2026-11-04T04:43:05.3239550Z [36;1mME="$(id -un)"[0m
+2026-11-04T04:43:05.3239847Z [36;1mrm -f /tmp/.vps-session-start /tmp/restored.list[0m
+2026-11-04T04:43:05.3240163Z [36;1m[0m
+2026-11-04T04:43:05.3240523Z [36;1m# Baseline of image packages BEFORE restoring yours (used to detect new installs).[0m
+2026-11-04T04:43:05.3241012Z [36;1mif command -v dpkg-query >/dev/null; then[0m
+2026-11-04T04:43:05.3241426Z [36;1m  dpkg-query -W -f='${binary:Package}\n' | sort -u > /tmp/pkgs.base[0m
+2026-11-04T04:43:05.3241920Z [36;1mfi[0m
+2026-11-04T04:43:05.3242105Z [36;1m[0m
+2026-11-04T04:43:05.3242297Z [36;1mif [ -d "$SRC" ]; then[0m
+2026-11-04T04:43:05.3242681Z [36;1m  # 1) Packages first, so your restored configs overwrite package defaults.[0m
+2026-11-04T04:43:05.3243134Z [36;1m  if [ -s "$SRC/_meta/apt-packages.txt" ]; then[0m
+2026-11-04T04:43:05.3243480Z [36;1m    echo "Reinstalling apt packages..."[0m
+2026-11-04T04:43:05.3243796Z [36;1m    sudo apt-get update -qq || true[0m
+2026-11-04T04:43:05.3244191Z [36;1m    sudo xargs -a "$SRC/_meta/apt-packages.txt" apt-get install -y -qq \[0m
+2026-11-04T04:43:05.3244721Z [36;1m      -o Dpkg::Options::=--force-confold || echo "Some packages failed to install"[0m
+2026-11-04T04:43:05.3245152Z [36;1m  fi[0m
+2026-11-04T04:43:05.3245339Z [36;1m[0m
+2026-11-04T04:43:05.3245661Z [36;1m  # 2) Files. Only files/symlinks are extracted (never directory entries), so[0m
+2026-11-04T04:43:05.3246179Z [36;1m  #    permissions of existing system dirs like /root are not touched.[0m
+2026-11-04T04:43:05.3246959Z [36;1m  (cd "$SRC" && find . \( -type f -o -type l \) ! -path './_meta/*' ! -path ./startup.sh -print0) > /tmp/restore-files.list[0m
+2026-11-04T04:43:05.3247505Z [36;1m  if [ -s /tmp/restore-files.list ]; then[0m
+2026-11-04T04:43:05.3247919Z [36;1m    tar -C "$SRC" --null --no-recursion -T /tmp/restore-files.list -cf - \[0m
+2026-11-04T04:43:05.3248341Z [36;1m      | sudo tar -xf - -C / --no-same-owner[0m
+2026-11-04T04:43:05.3248790Z [36;1m    # Git doesn't keep owners: runner's home goes back to runner, the rest is root's.[0m
+2026-11-04T04:43:05.3249279Z [36;1m    if [ -d "$SRC/home/runner" ] && [ -d /home/runner ]; then[0m
+2026-11-04T04:43:05.3249688Z [36;1m      for e in "$SRC"/home/runner/* "$SRC"/home/runner/.[!.]*; do[0m
+2026-11-04T04:43:05.3250144Z [36;1m        [ -e "$e" ] && sudo chown -R "$ME:$(id -gn)" "/home/runner/$(basename "$e")"[0m
+2026-11-04T04:43:05.3250522Z [36;1m      done[0m
+2026-11-04T04:43:05.3250726Z [36;1m    fi[0m
+2026-11-04T04:43:05.3251056Z [36;1m    # Record what really landed on disk (used later to detect your deletions).[0m
+2026-11-04T04:43:05.3251498Z [36;1m    sed -z 's|^\.||' /tmp/restore-files.list \[0m
+2026-11-04T04:43:05.3251995Z [36;1m      | sudo bash -c 'while IFS= read -r -d "" f; do { [ -e "$f" ] || [ -L "$f" ]; } && printf "%s\0" "$f"; done' \[0m
+2026-11-04T04:43:05.3252452Z [36;1m      > /tmp/restored.list[0m
+2026-11-04T04:43:05.3252811Z [36;1m    echo "Restored $(tr -cd '\0' < /tmp/restored.list | wc -c) files."[0m
+2026-11-04T04:43:05.3253171Z [36;1m  fi[0m
+2026-11-04T04:43:05.3253354Z [36;1m[0m
+2026-11-04T04:43:05.3253659Z [36;1m  # Git only keeps the exec bit; SSH refuses keys with loose permissions.[0m
+2026-11-04T04:43:05.3254295Z [36;1m  fix_ssh() { [ -d "$1" ] && chmod 700 "$1" && find "$1" -type f ! -name '*.pub' ! -name known_hosts -exec chmod 600 {} + ; return 0; }[0m
+2026-11-04T04:43:05.3254822Z [36;1m  fix_ssh "$HOME/.ssh"[0m
+2026-11-04T04:43:05.3255384Z [36;1m  sudo bash -c '[ -d /root/.ssh ] && chmod 700 /root/.ssh && find /root/.ssh -type f ! -name "*.pub" ! -name known_hosts -exec chmod 600 {} +' || true[0m
+2026-11-04T04:43:05.3255948Z [36;1m[0m
+2026-11-04T04:43:05.3256245Z [36;1m  # 3) Optional hook for anything else (services, kernel settings...).[0m
+2026-11-04T04:43:05.3257034Z [36;1m  if [ -f "$SRC/startup.sh" ]; then[0m
+2026-11-04T04:43:05.3257388Z [36;1m    echo "Running startup.sh"[0m
+2026-11-04T04:43:05.3257772Z [36;1m    sudo bash "$SRC/startup.sh" || echo "startup.sh exited non-zero"[0m
+2026-11-04T04:43:05.3258142Z [36;1m  fi[0m
+2026-11-04T04:43:05.3258334Z [36;1melse[0m
+2026-11-04T04:43:05.3258580Z [36;1m  echo "No previous VPS data; fresh start."[0m
+2026-11-04T04:43:05.3258871Z [36;1mfi[0m
+2026-11-04T04:43:05.3259052Z [36;1m[0m
+2026-11-04T04:43:05.3259418Z [36;1m# Everything from here on counts as "created in this session". The marker is set 1s in the[0m
+2026-11-04T04:43:05.3260191Z [36;1m# past so files written in the first instant (coarse kernel timestamps) are never missed;[0m
+2026-11-04T04:43:05.3260799Z [36;1m# re-saving a just-restored file is harmless because the content is identical.[0m
+2026-11-04T04:43:05.3261214Z [36;1msleep 2[0m
+2026-11-04T04:43:05.3261480Z [36;1mtouch -d '1 second ago' /tmp/.vps-session-start[0m
+2026-11-04T04:43:05.3261799Z [36;1mEOF[0m
+2026-11-04T04:43:05.3261982Z [36;1m[0m
+2026-11-04T04:43:05.3262200Z [36;1mchmod +x /tmp/backup.sh /tmp/restore.sh[0m
+2026-11-04T04:43:05.3281925Z shell: /usr/bin/bash -e {0}
+2026-11-04T04:43:05.3282184Z env:
+2026-11-04T04:43:05.3282378Z   BRANCH: main
+2026-11-04T04:43:05.3282588Z   SCAN_ROOTS: / /mnt
+2026-11-04T04:43:05.3282801Z   MAX_MB: 90
+2026-11-04T04:43:05.3282992Z ##[endgroup]
+2026-11-04T04:43:05.3388365Z ##[group]Run curl -sSf https://sshx.io/get | sh -s install
+2026-11-04T04:43:05.3388854Z [36;1mcurl -sSf https://sshx.io/get | sh -s install[0m
+2026-11-04T04:43:05.3389189Z [36;1m/tmp/restore.sh[0m
+2026-11-04T04:43:05.3407751Z shell: /usr/bin/bash -e {0}
+2026-11-04T04:43:05.3408011Z env:
+2026-11-04T04:43:05.3408205Z   BRANCH: main
+2026-11-04T04:43:05.3408414Z   SCAN_ROOTS: / /mnt
+2026-11-04T04:43:05.3408627Z   MAX_MB: 90
+2026-11-04T04:43:05.3408817Z ##[endgroup]
+2026-11-04T04:43:05.5858607Z [0m[35;1m↯ Downloading sshx from [4mhttps://s3.amazonaws.com/sshx/sshx-x86_64-unknown-linux-musl.tar.gz[0m
+2026-11-04T04:43:05.5909008Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-11-04T04:43:05.5909887Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-11-04T04:43:05.5910355Z 
+2026-11-04T04:43:05.8468081Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-11-04T04:43:06.3083277Z   0 2869k    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-11-04T04:43:06.3084036Z 100 2869k  100 2869k    0     0  3999k      0 --:--:-- --:--:-- --:--:-- 3996k
+2026-11-04T04:43:06.3125027Z 
+2026-11-04T04:43:06.3126364Z [0m[35;1m↯ Adding sshx binary to [4m/usr/local/bin[0m
+2026-11-04T04:43:06.3763610Z 
+2026-11-04T04:43:06.3764525Z [0m[35;1m↯ Done! You can now run sshx.[0m
+2026-11-04T04:43:06.3951229Z Reinstalling apt packages...
+2026-11-04T04:43:11.3066950Z E: Unable to locate package cloudflared
+2026-11-04T04:43:11.3084759Z Some packages failed to install
+2026-11-04T04:43:37.6842334Z Restored 73787 files.
+2026-11-04T04:43:39.7028846Z ##[group]Run (
+2026-11-04T04:43:39.7029108Z [36;1m([0m
+2026-11-04T04:43:39.7029306Z [36;1m  while true; do[0m
+2026-11-04T04:43:39.7029539Z [36;1m    sleep 300[0m
+2026-11-04T04:43:39.7029787Z [36;1m    /tmp/backup.sh || true[0m
+2026-11-04T04:43:39.7030045Z [36;1m  done[0m
+2026-11-04T04:43:39.7030237Z [36;1m) &[0m
+2026-11-04T04:43:39.7030426Z [36;1m[0m
+2026-11-04T04:43:39.7030648Z [36;1mecho "====================================="[0m
+2026-11-04T04:43:39.7030961Z [36;1mecho "STARTING SSHX VPS..."[0m
+2026-11-04T04:43:39.7031265Z [36;1mecho "YOUR SSHX LINK WILL APPEAR BELOW:"[0m
+2026-11-04T04:43:39.7031608Z [36;1mecho "====================================="[0m
+2026-11-04T04:43:39.7031884Z [36;1m[0m
+2026-11-04T04:43:39.7032077Z [36;1mtimeout 335m sshx || true[0m
+2026-11-04T04:43:39.7052483Z shell: /usr/bin/bash -e {0}
+2026-11-04T04:43:39.7052748Z env:
+2026-11-04T04:43:39.7052936Z   BRANCH: main
+2026-11-04T04:43:39.7053141Z   SCAN_ROOTS: / /mnt
+2026-11-04T04:43:39.7053393Z   MAX_MB: 90
+2026-11-04T04:43:39.7053590Z ##[endgroup]
+2026-11-04T04:43:39.7095343Z =====================================
+2026-11-04T04:43:39.7095945Z STARTING SSHX VPS...
+2026-11-04T04:43:39.7096451Z YOUR SSHX LINK WILL APPEAR BELOW:
+2026-11-04T04:43:39.7097285Z =====================================
+2026-11-04T04:43:39.7808563Z 
+2026-11-04T04:43:39.7809687Z   [1;32msshx[0m [32mv0.4.1[0m
+2026-11-04T04:43:39.7810168Z 
+2026-11-04T04:43:39.7810969Z   [32m➜[0m  Link:  [4;36mhttps://sshx.io/s/6KgSkFiE40#pTbvRrtIPlZpes[0m
+2026-11-04T04:43:39.781
