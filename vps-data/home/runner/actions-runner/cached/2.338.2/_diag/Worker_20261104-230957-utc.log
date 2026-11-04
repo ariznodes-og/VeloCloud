@@ -1,0 +1,3191 @@
+[2026-11-04 23:09:57Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known config file 'Credentials': '/home/runner/actions-runner/cached/2.338.2/.credentials'
+[2026-11-04 23:09:57Z INFO HostContext] Pull OrchestrationId 5805aa2a-0ac1-8dd6-9c2d-4f2f36d2a539.Build-VPS.__default from runner JWT claims
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known config file 'Runner': '/home/runner/actions-runner/cached/2.338.2/.runner'
+[2026-11-04 23:09:57Z INFO Worker] Version: 2.338.2
+[2026-11-04 23:09:57Z INFO Worker] Commit: d1eb12d4b115c301201de27d667284e1a80f2ab5
+[2026-11-04 23:09:57Z INFO Worker] Culture: 
+[2026-11-04 23:09:57Z INFO Worker] UI Culture: 
+[2026-11-04 23:09:57Z INFO Worker] Waiting to receive the job message from the channel.
+[2026-11-04 23:09:57Z INFO ProcessChannel] Receiving message of length 29245, with hash '0509743a708037935644b87b84331f5db90f4864478bb444860a61863537e0f7'
+[2026-11-04 23:09:57Z INFO Worker] Message received.
+[2026-11-04 23:09:57Z INFO Worker] Job message:
+ {
+  "environmentVariables": [
+    {
+      "type": 2,
+      "file": 1,
+      "line": 16,
+      "col": 3,
+      "map": [
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 16,
+            "col": 3,
+            "lit": "BRANCH"
+          },
+          "value": {
+            "type": 3,
+            "file": 1,
+            "line": 16,
+            "col": 11,
+            "expr": "github.ref_name"
+          }
+        },
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 18,
+            "col": 3,
+            "lit": "SCAN_ROOTS"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 18,
+            "col": 15,
+            "lit": "/ /mnt"
+          }
+        },
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 20,
+            "col": 3,
+            "lit": "MAX_MB"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 20,
+            "col": 11,
+            "lit": "90"
+          }
+        }
+      ]
+    }
+  ],
+  "fileTable": [
+    ".github/workflows/vps.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v4",
+        "repositoryType": "GitHub"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 27,
+        "col": 15,
+        "lit": "Checkout Repo"
+      },
+      "contextName": "__actions_checkout",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 30,
+        "col": 11,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 30,
+              "col": 11,
+              "lit": "ref"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 30,
+              "col": 16,
+              "expr": "github.ref_name"
+            }
+          },
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 31,
+              "col": 11,
+              "lit": "fetch-depth"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 31,
+              "col": 24,
+              "lit": "0"
+            }
+          },
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 32,
+              "col": 11,
+              "lit": "token"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 32,
+              "col": 18,
+              "expr": "secrets.GITHUB_TOKEN"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "2ce20fcd-4f35-415e-9bcd-f79f89bc5183",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 34,
+        "col": 15,
+        "lit": "Configure Git"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 35,
+              "col": 14,
+              "lit": "git config --global user.name \"VPS Auto-Saver\"\ngit config --global user.email \"vps@autosaver.com\"\ngit config --global pull.rebase true\ngit config --global --add safe.directory \"$GITHUB_WORKSPACE\"\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "966f2f15-5567-401a-80c9-762fd1069226",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 41,
+        "col": 15,
+        "lit": "Install backup/restore scripts"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 42,
+              "col": 14,
+              "lit": "cat > /tmp/backup.sh <<'EOF'\n#!/usr/bin/env bash\n# Saves every file created/changed since the session started, anywhere on the VPS.\nset -uo pipefail\nexport LC_ALL=C\ncd \"$GITHUB_WORKSPACE\"\nDEST=\"$GITHUB_WORKSPACE/vps-data\"\nMARK=/tmp/.vps-session-start\n[ -f \"$MARK\" ] || { echo \"Session marker missing (restore did not finish); skipping backup.\"; exit 0; }\nmkdir -p \"$DEST/_meta\"\nrm -f /tmp/changed.list /tmp/skipped.list /tmp/deleted.list\n\n# 1) Find changed files. -cnewer uses ctime, so files extracted with old\n#    timestamps (unzip, tar, git clone) are still detected.\n#    Pruned: pseudo-FS, system dirs that the fresh runner image already owns\n#    (reinstall those via apt, which is tracked separately), caches, boot-time noise.\nsudo find $SCAN_ROOTS -xdev \\\n  \\( -path /proc -o -path /sys -o -path /dev -o -path /run -o -path /tmp -o -path /var/tmp \\\n     -o -path /var/log -o -path /var/cache -o -path /var/lib -o -path /boot -o -path /snap \\\n     -o -path /lost+found -o -path /bin -o -path /sbin -o -path /lib -o -path /lib32 \\\n     -o -path /lib64 -o -path /libx32 \\\n     -o \\( -path '/usr/*' ! -path /usr/local ! -path '/usr/local/*' \\) \\\n     -o -path /usr/local/bin/sshx \\\n     -o -path /home/runner/work -o -path /home/runner/runners \\\n     -o -path '/home/*/.cache' -o -path '/home/*/.npm' -o -path '/home/*/.cargo' \\\n     -o -path '/home/*/.rustup' -o -path '/home/*/.dotnet' -o -path '/home/*/.nvm' \\\n     -o -path '/home/*/.ghcup' -o -path /root/.cache -o -path /root/.npm \\\n     -o -path /opt/hostedtoolcache -o -path /opt/actionarchivecache \\\n     -o -path /opt/runner-cache -o -path /opt/post-generation \\\n     -o -path /etc/resolv.conf -o -path /etc/hosts -o -path /etc/hostname \\\n     -o -path /etc/machine-id -o -path /etc/mtab -o -path /etc/ld.so.cache \\\n     -o -path '/etc/passwd*' -o -path '/etc/shadow*' -o -path '/etc/group*' \\\n     -o -path '/etc/gshadow*' -o -path /etc/alternatives -o -path /etc/ssl/certs \\\n     -o -path '/etc/ssh/ssh_host_*' \\\n     -o -name .git -o -name __pycache__ \\) -prune -o \\\n  \\( -cnewer \"$MARK\" -type f -size +\"${MAX_MB}M\" -fprint /tmp/skipped.list \\) -o \\\n  \\( -cnewer \"$MARK\" \\( -type f -o -type l \\) -print0 \\) > /tmp/changed.list 2>/dev/null\n\n# 2) Copy them into vps-data/<absolute path>. sudo tar so root-only files are readable.\nif [ -s /tmp/changed.list ]; then\n  sudo tar --null --no-recursion -T /tmp/changed.list -cf - 2>/tmp/tar.err \\\n    | tar -xf - -C \"$DEST\" --no-same-owner\n  grep -v 'Removing leading' /tmp/tar.err | head -5 || true\nfi\n\n# 3) Propagate deletions: files we restored earlier that you have since deleted.\nif [ -s /tmp/restored.list ]; then\n  sudo bash -c 'while IFS= read -r -d \"\" f; do [ -e \"$f\" ] || [ -L \"$f\" ] || printf \"%s\\0\" \"$f\"; done' \\\n    < /tmp/restored.list > /tmp/deleted.list\n  while IFS= read -r -d '' f; do rm -f -- \"$DEST$f\"; done < /tmp/deleted.list\nfi\n\n# 4) Remember apt packages you installed this session.\nif command -v dpkg-query >/dev/null && [ -f /tmp/pkgs.base ]; then\n  dpkg-query -W -f='${binary:Package}\\n' | sort -u > /tmp/pkgs.now\n  { cat \"$DEST/_meta/apt-packages.txt\" 2>/dev/null; comm -13 /tmp/pkgs.base /tmp/pkgs.now; } \\\n    | sort -u | sed '/^$/d' > /tmp/pkgs.merged\n  if [ -s /tmp/pkgs.merged ]; then cp /tmp/pkgs.merged \"$DEST/_meta/apt-packages.txt\"; fi\nfi\n\n# 5) Be transparent about anything too big for GitHub.\nif [ -s /tmp/skipped.list ]; then\n  sort -u /tmp/skipped.list > \"$DEST/_meta/skipped-too-large.txt\"\n  echo \"WARNING: files over ${MAX_MB} MB were NOT saved:\"; cat \"$DEST/_meta/skipped-too-large.txt\"\nelse\n  rm -f \"$DEST/_meta/skipped-too-large.txt\"\nfi\n\n# 6) Commit + push. Oversized files inside the repo workspace are excluded so one\n#    giant file can't block every push. -f makes sure .gitignore can't hide vps-data.\nfind . -path ./.git -prune -o -path ./vps-data -prune -o -type f -size +95M -print \\\n  | sed 's|^\\./|/|' >> .git/info/exclude\ngit add -A\ngit add -A -f -- vps-data\nif git diff --cached --quiet; then\n  echo \"No changes to back up.\"\n  exit 0\nfi\ngit commit -qm \"Auto-backup $(date -u '+%F %T') UTC [skip ci]\"\nfor i in 1 2 3; do\n  if git push -q origin \"HEAD:${BRANCH}\"; then\n    echo \"Backup pushed to ${BRANCH}\"\n    exit 0\n  fi\n  git pull --rebase -q origin \"${BRANCH}\" || git rebase --abort\n  sleep 5\ndone\necho \"Push failed after retries; will retry next cycle.\"\nexit 1\nEOF\n\ncat > /tmp/restore.sh <<'EOF'\n#!/usr/bin/env bash\nset -uo pipefail\nexport LC_ALL=C DEBIAN_FRONTEND=noninteractive\nSRC=\"$GITHUB_WORKSPACE/vps-data\"\nME=\"$(id -un)\"\nrm -f /tmp/.vps-session-start /tmp/restored.list\n\n# Baseline of image packages BEFORE restoring yours (used to detect new installs).\nif command -v dpkg-query >/dev/null; then\n  dpkg-query -W -f='${binary:Package}\\n' | sort -u > /tmp/pkgs.base\nfi\n\nif [ -d \"$SRC\" ]; then\n  # 1) Packages first, so your restored configs overwrite package defaults.\n  if [ -s \"$SRC/_meta/apt-packages.txt\" ]; then\n    echo \"Reinstalling apt packages...\"\n    sudo apt-get update -qq || true\n    sudo xargs -a \"$SRC/_meta/apt-packages.txt\" apt-get install -y -qq \\\n      -o Dpkg::Options::=--force-confold || echo \"Some packages failed to install\"\n  fi\n\n  # 2) Files. Only files/symlinks are extracted (never directory entries), so\n  #    permissions of existing system dirs like /root are not touched.\n  (cd \"$SRC\" && find . \\( -type f -o -type l \\) ! -path './_meta/*' ! -path ./startup.sh -print0) > /tmp/restore-files.list\n  if [ -s /tmp/restore-files.list ]; then\n    tar -C \"$SRC\" --null --no-recursion -T /tmp/restore-files.list -cf - \\\n      | sudo tar -xf - -C / --no-same-owner\n    # Git doesn't keep owners: runner's home goes back to runner, the rest is root's.\n    if [ -d \"$SRC/home/runner\" ] && [ -d /home/runner ]; then\n      for e in \"$SRC\"/home/runner/* \"$SRC\"/home/runner/.[!.]*; do\n        [ -e \"$e\" ] && sudo chown -R \"$ME:$(id -gn)\" \"/home/runner/$(basename \"$e\")\"\n      done\n    fi\n    # Record what really landed on disk (used later to detect your deletions).\n    sed -z 's|^\\.||' /tmp/restore-files.list \\\n      | sudo bash -c 'while IFS= read -r -d \"\" f; do { [ -e \"$f\" ] || [ -L \"$f\" ]; } && printf \"%s\\0\" \"$f\"; done' \\\n      > /tmp/restored.list\n    echo \"Restored $(tr -cd '\\0' < /tmp/restored.list | wc -c) files.\"\n  fi\n\n  # Git only keeps the exec bit; SSH refuses keys with loose permissions.\n  fix_ssh() { [ -d \"$1\" ] && chmod 700 \"$1\" && find \"$1\" -type f ! -name '*.pub' ! -name known_hosts -exec chmod 600 {} + ; return 0; }\n  fix_ssh \"$HOME/.ssh\"\n  sudo bash -c '[ -d /root/.ssh ] && chmod 700 /root/.ssh && find /root/.ssh -type f ! -name \"*.pub\" ! -name known_hosts -exec chmod 600 {} +' || true\n\n  # 3) Optional hook for anything else (services, kernel settings...).\n  if [ -f \"$SRC/startup.sh\" ]; then\n    echo \"Running startup.sh\"\n    sudo bash \"$SRC/startup.sh\" || echo \"startup.sh exited non-zero\"\n  fi\nelse\n  echo \"No previous VPS data; fresh start.\"\nfi\n\n# Everything from here on counts as \"created in this session\". The marker is set 1s in the\n# past so files written in the first instant (coarse kernel timestamps) are never missed;\n# re-saving a just-restored file is harmless because the content is identical.\nsleep 2\ntouch -d '1 second ago' /tmp/.vps-session-start\nEOF\n\nchmod +x /tmp/backup.sh /tmp/restore.sh\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "d39eddbb-8474-4bfa-96bd-d8dbf4004615",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 198,
+        "col": 15,
+        "lit": "Install SSHX and restore previous VPS state"
+      },
+      "contextName": "__run_3",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 199,
+              "col": 14,
+              "lit": "curl -sSf https://sshx.io/get | sh -s install\n/tmp/restore.sh\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "c475b4b9-6760-4ea1-927f-6480dae2d7b0",
+      "name": "__run_3"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 203,
+        "col": 15,
+        "lit": "Start SSHX VPS with periodic auto-backup"
+      },
+      "contextName": "__run_4",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 204,
+              "col": 14,
+              "lit": "(\n  while true; do\n    sleep 300\n    /tmp/backup.sh || true\n  done\n) &\n\necho \"=====================================\"\necho \"STARTING SSHX VPS...\"\necho \"YOUR SSHX LINK WILL APPEAR BELOW:\"\necho \"=====================================\"\n\ntimeout 335m sshx || true\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "2216e99d-4090-4ad0-ab25-0e017673e23b",
+      "name": "__run_4"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 220,
+        "col": 15,
+        "lit": "Final backup"
+      },
+      "contextName": "__run_5",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 222,
+              "col": 14,
+              "lit": "/tmp/backup.sh"
+            }
+          }
+        ]
+      },
+      "condition": "always()",
+      "id": "2c04881e-b169-4bd7-b125-d63378ca8048",
+      "name": "__run_5"
+    }
+  ],
+  "variables": {
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "RunService.FixEmbeddedIssues": {
+      "value": "true"
+    },
+    "actions.runner.requirenode24": {
+      "value": "true"
+    },
+    "actions.runner.usenode24bydefault": {
+      "value": "true"
+    },
+    "actions.runner.warnonnode20": {
+      "value": "true"
+    },
+    "actions_add_check_run_id_to_job_context": {
+      "value": "true"
+    },
+    "actions_batch_action_resolution": {
+      "value": "false"
+    },
+    "actions_cache_mode": {
+      "value": "write"
+    },
+    "actions_container_action_runner_temp": {
+      "value": "true"
+    },
+    "actions_display_helpful_actions_download_errors": {
+      "value": "true"
+    },
+    "actions_runner_allow_artifacts_file": {
+      "value": "true"
+    },
+    "actions_runner_compare_workflow_parser": {
+      "value": "false"
+    },
+    "actions_runner_deprecate_linux_arm32": {
+      "value": "true"
+    },
+    "actions_runner_emit_composite_markers": {
+      "value": "true"
+    },
+    "actions_runner_kill_linux_arm32": {
+      "value": "true"
+    },
+    "actions_runner_node20_removal_date": {
+      "value": "September 23rd, 2026"
+    },
+    "actions_runner_node24_default_date": {
+      "value": "June 16th, 2026"
+    },
+    "actions_self_repository": {
+      "value": "true"
+    },
+    "actions_service_container_command": {
+      "value": "true"
+    },
+    "actions_set_orchestration_id_env_for_actions": {
+      "value": "true"
+    },
+    "actions_skip_retry_complete_job_upon_known_errors": {
+      "value": "true"
+    },
+    "actions_snapshot_preflight_hosted_runner_check": {
+      "value": "false"
+    },
+    "actions_snapshot_preflight_image_gen_pool_check": {
+      "value": "false"
+    },
+    "actions_use_bearer_token_for_codeload": {
+      "value": "false"
+    },
+    "actions_uses_cache_service_v2": {
+      "value": "true"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.from_run_service": {
+      "value": "true"
+    },
+    "system.github.job": {
+      "value": "Build-VPS"
+    },
+    "system.github.launch_endpoint": {
+      "value": "https://launch.actions.githubusercontent.com"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "true"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"write\",\"Metadata\":\"read\"}"
+    },
+    "system.orchestrationId": {
+      "value": "5805aa2a-0ac1-8dd6-9c2d-4f2f36d2a539.Build-VPS.__default"
+    },
+    "system.phaseDisplayName": {
+      "value": "Build-VPS"
+    },
+    "system.runner.brokerwebsocketprobeurl": {
+      "value": "wss://broker.actions.githubusercontent.com/_ws/ping.sock"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "system.runnerEnvironment": {
+      "value": "github-hosted"
+    },
+    "system.runnerGroupName": {
+      "value": "GitHub Actions"
+    }
+  },
+  "messageType": "RunnerJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "actions",
+    "version": 0,
+    "planId": "5805aa2a-0ac1-8dd6-9c2d-4f2f36d2a539",
+    "planGroup": null,
+    "artifactUri": null,
+    "artifactLocation": null,
+    "definition": null,
+    "owner": null
+  },
+  "timeline": {
+    "id": "5805aa2a-0ac1-8dd6-9c2d-4f2f36d2a539",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "a05fa68d-753b-539f-b044-240520969981",
+  "jobDisplayName": "Build-VPS",
+  "jobName": "__default",
+  "requestId": 0,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "",
+          "ServerName": "",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/CLccyGhGGNiFFHOHUo97QzBRJGne7UScHwPTcX4yYFCM2pN3By/",
+          "FeedStreamUrl": "wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "PipelinesServiceUrl": "https://pipelinesghubeus7.actions.githubusercontent.com/CLccyGhGGNiFFHOHUo97QzBRJGne7UScHwPTcX4yYFCM2pN3By/",
+          "GenerateIdTokenUrl": "",
+          "ConnectivityChecks": "",
+          "ConnectivityAndDNSChecks": ""
+        },
+        "name": "SystemVssConnection",
+        "url": "https://run-actions-3-azure-eastus.actions.githubusercontent.com/77/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": "***"
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "7c43dc52cd55ba023ce3474381872a9bceaebc26"
+        },
+        {
+          "k": "repository",
+          "v": "ariznodes-og/VeloCloud"
+        },
+        {
+          "k": "repository_owner",
+          "v": "ariznodes-og"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "335593216"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/ariznodes-og/VeloCloud.git"
+        },
+        {
+          "k": "run_id",
+          "v": "41931478474"
+        },
+        {
+          "k": "run_number",
+          "v": "10"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "actor_id",
+          "v": "335593216"
+        },
+        {
+          "k": "actor",
+          "v": "ariznodes-og"
+        },
+        {
+          "k": "workflow",
+          "v": "Phase 1 Leapfrog VPS"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "schedule"
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "schedule",
+                "v": "0 */6 * * *"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/ariznodes-og/VeloCloud.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": "2026-11-02T15:58:09Z"
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "ariznodes-og/VeloCloud"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/ariznodes-og/VeloCloud.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": false
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pull_requests",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/ariznodes-og/VeloCloud"
+                    },
+                    {
+                      "k": "id",
+                      "v": 1443171587.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "Python"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "VeloCloud"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOVgUNAw"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/335593216?v=4"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/ariznodes-og/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/ariznodes-og/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/ariznodes-og/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/ariznodes-og/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/ariznodes-og"
+                          },
+                          {
+                            "k": "id",
+                            "v": 335593216.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "ariznodes-og"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOFAC_AA"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/ariznodes-og/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/ariznodes-og/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/ariznodes-og/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/ariznodes-og/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/ariznodes-og/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/ariznodes-og"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pull_request_creation_policy",
+                      "v": "all"
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": "2026-11-04T19:20:10Z"
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 867565.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:ariznodes-og/VeloCloud.git"
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/ariznodes-og/VeloCloud"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2026-11-04T19:20:14Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/ariznodes-og/VeloCloud"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "workflow",
+                "v": ".github/workflows/vps.yml"
+              }
+            ]
+          }
+        },
+        {
+          "k": "workflow_ref",
+          "v": "ariznodes-og/VeloCloud/.github/workflows/vps.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "7c43dc52cd55ba023ce3474381872a9bceaebc26"
+        },
+        {
+          "k": "repository_id",
+          "v": "1443171587"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "ariznodes-og"
+        }
+      ]
+    },
+    "inputs": {
+      "t": 2
+    },
+    "job": {
+      "t": 2,
+      "d": [
+        {
+          "k": "check_run_id",
+          "v": 126929184428.0
+        },
+        {
+          "k": "workflow_ref",
+          "v": "ariznodes-og/VeloCloud/.github/workflows/vps.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "7c43dc52cd55ba023ce3474381872a9bceaebc26"
+        },
+        {
+          "k": "workflow_repository",
+          "v": "ariznodes-og/VeloCloud"
+        },
+        {
+          "k": "workflow_file_path",
+          "v": ".github/workflows/vps.yml"
+        }
+      ]
+    },
+    "matrix": null,
+    "needs": {
+      "t": 2
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "vars": {
+      "t": 2
+    }
+  },
+  "billingOwnerId": "U_kgDOFAC_AA"
+}
+[2026-11-04 23:09:57Z INFO JobRunner] Job ID a05fa68d-753b-539f-b044-240520969981
+[2026-11-04 23:09:57Z INFO ConfigurationStore] currentAssemblyLocation: /home/runner/actions-runner/cached/2.338.2/bin/Runner.Worker.dll
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO ConfigurationStore] binPath: /home/runner/actions-runner/cached/2.338.2/bin
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO ConfigurationStore] RootFolder: /home/runner/actions-runner/cached/2.338.2
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known config file 'Runner': '/home/runner/actions-runner/cached/2.338.2/.runner'
+[2026-11-04 23:09:57Z INFO ConfigurationStore] ConfigFilePath: /home/runner/actions-runner/cached/2.338.2/.runner
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known config file 'MigratedRunner': '/home/runner/actions-runner/cached/2.338.2/.runner_migrated'
+[2026-11-04 23:09:57Z INFO ConfigurationStore] MigratedConfigFilePath: /home/runner/actions-runner/cached/2.338.2/.runner_migrated
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known config file 'Credentials': '/home/runner/actions-runner/cached/2.338.2/.credentials'
+[2026-11-04 23:09:57Z INFO ConfigurationStore] CredFilePath: /home/runner/actions-runner/cached/2.338.2/.credentials
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/runner/actions-runner/cached/2.338.2/.credentials_migrated'
+[2026-11-04 23:09:57Z INFO ConfigurationStore] MigratedCredFilePath: /home/runner/actions-runner/cached/2.338.2/.credentials_migrated
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known config file 'Service': '/home/runner/actions-runner/cached/2.338.2/.service'
+[2026-11-04 23:09:57Z INFO ConfigurationStore] ServiceConfigFilePath: /home/runner/actions-runner/cached/2.338.2/.service
+[2026-11-04 23:09:57Z INFO ConfigurationStore] Read setting file: 281 chars
+[2026-11-04 23:09:57Z INFO JobRunner] Initializing launch client
+[2026-11-04 23:09:57Z INFO JobServerQueue] Initializing results client
+[2026-11-04 23:09:57Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2026-11-04 23:09:57Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.
+[2026-11-04 23:09:57Z INFO JobServerQueue] Start process web console line queue.
+[2026-11-04 23:09:57Z INFO JobServerQueue] Start process file upload queue.
+[2026-11-04 23:09:57Z INFO JobServerQueue] Start results file upload queue.
+[2026-11-04 23:09:57Z INFO JobServerQueue] Starting results-based upload queue...
+[2026-11-04 23:09:57Z INFO JobServerQueue] Start process timeline update queue.
+[2026-11-04 23:09:57Z INFO ExecutionContext] Initializing Job context
+[2026-11-04 23:09:57Z INFO ExecutionContext] Initialize GitHub context
+[2026-11-04 23:09:57Z INFO ExecutionContext] Initialize Env context
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:57Z INFO JobRunner] Starting the job execution context.
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:57Z INFO JobRunner] Validating directory permissions for: '/home/runner/work'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Tools': '/opt/hostedtoolcache'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:09:57Z INFO JobRunner] Getting job extension.
+[2026-11-04 23:09:57Z INFO JobRunner] Initialize job. Getting all job steps.
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known config file 'Credentials': '/home/runner/actions-runner/cached/2.338.2/.credentials'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known config file 'SetupInfo': '/home/runner/actions-runner/cached/2.338.2/.setup_info'
+[2026-11-04 23:09:57Z INFO JobExtension] Load machine setup info from /home/runner/actions-runner/cached/2.338.2/.setup_info
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:57Z INFO PipelineDirectoryManager] Loading tracking config if exists: /home/runner/work/_PipelineMapping/ariznodes-og/VeloCloud/PipelineFolder.json
+[2026-11-04 23:09:57Z INFO PipelineDirectoryManager] Creating a new tracking config file.
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:57Z INFO PipelineDirectoryManager] Creating pipeline directory.
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:57Z INFO PipelineDirectoryManager] Creating workspace directory.
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:57Z INFO JobExtension] Downloading actions
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Actions': '/home/runner/work/_actions'
+[2026-11-04 23:09:57Z INFO Worker] Listening for cancel message from the channel.
+[2026-11-04 23:09:57Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2026-11-04 23:09:57Z INFO ResultServer] Successfully started websocket client.
+[2026-11-04 23:09:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9b5301b9-2694-4a95-9463-0eedec9ac771', success rate: 1/1.
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Actions': '/home/runner/work/_actions'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:57Z INFO HostContext] Well known directory 'Actions': '/home/runner/work/_actions'
+[2026-11-04 23:09:57Z INFO ActionManager] Check if action archive 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' already exists in cache directory '/opt/actionarchivecache'
+[2026-11-04 23:09:57Z INFO ActionManager] Found action archive '/opt/actionarchivecache/actions_checkout/11d5960a326750d5838078e36cf38b85af677262.tar.gz' in cache directory '/opt/actionarchivecache'
+[2026-11-04 23:09:57Z INFO ActionManager] Which2: 'tar'
+[2026-11-04 23:09:58Z INFO ActionManager] Location: '/usr/bin/tar'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/tar'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Arguments: '-xzf "/home/runner/work/_actions/_temp_25a99422-7858-4541-8795-91d02b1b2241/4cb8b517-5ddd-4396-9f74-01de6ecebbb2.tar.gz"'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Working directory: '/home/runner/work/_actions/_temp_25a99422-7858-4541-8795-91d02b1b2241/_staging'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 2270.
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper] Process started with process id 2270, waiting for process exit.
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper] Finished process 2270 with exit code 0, and elapsed time 00:00:00.0176900.
+[2026-11-04 23:09:58Z INFO ActionManager] Finished getting action repository.
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Actions': '/home/runner/work/_actions'
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2026-11-04 23:09:58Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Actions': '/home/runner/work/_actions'
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 101,
+          "col": 3,
+          "lit": "allow-unsafe-pr-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 109,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2026-11-04 23:09:58Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Actions': '/home/runner/work/_actions'
+[2026-11-04 23:09:58Z INFO ActionManager] Load action that reference repository from '/home/runner/work/_actions/actions/checkout/v4'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Actions': '/home/runner/work/_actions'
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 101,
+          "col": 3,
+          "lit": "allow-unsafe-pr-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 109,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2026-11-04 23:09:58Z INFO ActionManager] Action pre node.js file: N/A.
+[2026-11-04 23:09:58Z INFO ActionManager] Action node.js file: dist/index.js.
+[2026-11-04 23:09:58Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2026-11-04 23:09:58Z INFO JobExtension] Adding .
+[2026-11-04 23:09:58Z INFO JobExtension] Adding .
+[2026-11-04 23:09:58Z INFO JobExtension] Adding .
+[2026-11-04 23:09:58Z INFO JobExtension] Adding .
+[2026-11-04 23:09:58Z INFO JobExtension] Adding .
+[2026-11-04 23:09:58Z INFO JobExtension] Adding .
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO JobExtension] Total accessible running process: 167.
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:58Z INFO JobExtension] Start checking service connectivity in background.
+[2026-11-04 23:09:58Z INFO JobExtension] Start checking runner websocket connectivity in background.
+[2026-11-04 23:09:58Z INFO BrokerServer] Attempting to start runner websocket client.
+[2026-11-04 23:09:58Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "9b5301b9-2694-4a95-9463-0eedec9ac771",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2026-11-04T23:09:57.6854249Z",
+  "finishTime": "2026-11-04T23:09:58.196872Z"
+}.
+[2026-11-04 23:09:58Z INFO JobRunner] Total job steps: 6.
+[2026-11-04 23:09:58Z INFO JobRunner] Run all job steps.
+[2026-11-04 23:09:58Z INFO DapDebugger] DapDebugger initialized
+[2026-11-04 23:09:58Z INFO StepsRunner] Processing step: DisplayName='Checkout Repo'
+[2026-11-04 23:09:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9b5301b9-2694-4a95-9463-0eedec9ac771', success rate: 1/1.
+[2026-11-04 23:09:58Z INFO StepsRunner] Evaluating: success()
+[2026-11-04 23:09:58Z INFO StepsRunner] Result: true
+[2026-11-04 23:09:58Z INFO StepsRunner] Starting the step.
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Actions': '/home/runner/work/_actions'
+[2026-11-04 23:09:58Z INFO ActionManager] Load action that reference repository from '/home/runner/work/_actions/actions/checkout/v4'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Actions': '/home/runner/work/_actions'
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 101,
+          "col": 3,
+          "lit": "allow-unsafe-pr-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 109,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2026-11-04 23:09:58Z INFO ActionManager] Action pre node.js file: N/A.
+[2026-11-04 23:09:58Z INFO ActionManager] Action node.js file: dist/index.js.
+[2026-11-04 23:09:58Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2026-11-04 23:09:58Z INFO ExecutionContext] Reserve record order 8 to 14 for post job actions.
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Diag': '/home/runner/actions-runner/cached/2.338.2/_diag'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:09:58Z INFO ExecutionContext] Write event payload to /home/runner/work/_temp/_github_workflow/event.json
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:09:58Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateArtifactsFileCommand, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ArtifactsListFileCommand, Runner.Worker
+[2026-11-04 23:09:58Z INFO ArtifactsListFileCommand] Wrote $GITHUB_ARTIFACTS_LIST with 0 subject(s) to '/home/runner/work/_temp/_runner_file_commands/artifacts_list_86d43422-92a9-4758-a1d5-3a9effdf7d23'
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "ariznodes-og/VeloCloud"
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'ssh-key': default value evaluate result: ""
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'ssh-known-hosts': default value evaluate result: ""
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'ssh-user': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 51,
+  "col": 14,
+  "lit": "git"
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 54,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'path': default value evaluate result: ""
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 59,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'filter': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": ""
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 69,
+  "col": 14,
+  "lit": ""
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'show-progress': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 94,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 97,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'github-server-url': default value evaluate result: ""
+[2026-11-04 23:09:58Z INFO ActionManifestManagerLegacy] Input 'allow-unsafe-pr-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 109,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-04 23:09:58Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command error
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command group
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-11-04 23:09:58Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:09:58Z INFO HostContext] Well known directory 'Externals': '/home/runner/actions-runner/cached/2.338.2/externals'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   File name: '/home/runner/actions-runner/cached/2.338.2/externals/node24/bin/node'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Arguments: '"/home/runner/work/_actions/actions/checkout/v4/dist/index.js"'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Working directory: '/home/runner/work/VeloCloud/VeloCloud'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 2274.
+[2026-11-04 23:09:58Z INFO ProcessInvokerWrapper] Process started with process id 2274, waiting for process exit.
+[2026-11-04 23:09:58Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2026-11-04 23:09:58Z ERR  GitHubActionsService] GET request to wss://broker.actions.githubusercontent.com/_ws/ping.sock failed. HTTP Status: SwitchingProtocols
+[2026-11-04 23:09:58Z INFO BrokerServer] Successfully started runner websocket client.
+[2026-11-04 23:09:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:09:58Z INFO AddMaskCommandExtension] Add new secret mask with length of 524
+[2026-11-04 23:09:58Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2026-11-04 23:09:58Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-11-04 23:09:58Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /home/runner/actions-runner/cached/2.338.2/_diag/blocks/5805aa2a-0ac1-8dd6-9c2d-4f2f36d2a539_9b5301b9-2694-4a95-9463-0eedec9ac771.1
+[2026-11-04 23:09:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:09:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:09:59Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2026-11-04 23:10:08Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:08Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:08Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:17Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:17Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:18Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:18Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:18Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Finished process 2274 with exit code 0, and elapsed time 00:00:28.9487691.
+[2026-11-04 23:10:27Z INFO CreateStepSummaryCommand] Step Summary file (/home/runner/work/_temp/_runner_file_commands/step_summary_86d43422-92a9-4758-a1d5-3a9effdf7d23) is empty; skipping attachment upload
+[2026-11-04 23:10:27Z INFO CreateArtifactsFileCommand] Processing $GITHUB_ARTIFACTS file '/home/runner/work/_temp/_runner_file_commands/artifacts_86d43422-92a9-4758-a1d5-3a9effdf7d23'
+[2026-11-04 23:10:27Z INFO CreateArtifactsFileCommand] $GITHUB_ARTIFACTS file is empty; nothing to process.
+[2026-11-04 23:10:27Z INFO StepsRunner] Step result: 
+[2026-11-04 23:10:27Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v4",
+  "type": "node24",
+  "stage": "Main",
+  "stepId": "2ce20fcd-4f35-415e-9bcd-f79f89bc5183",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 29,
+  "startTime": "2026-11-04T23:09:58.209154Z",
+  "finishTime": "2026-11-04T23:10:27.2086682Z"
+}.
+[2026-11-04 23:10:27Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-11-04 23:10:27Z INFO StepsRunner] Current state: job state = ''
+[2026-11-04 23:10:27Z INFO StepsRunner] Processing step: DisplayName='Configure Git'
+[2026-11-04 23:10:27Z INFO StepsRunner] Evaluating: success()
+[2026-11-04 23:10:27Z INFO StepsRunner] Result: true
+[2026-11-04 23:10:27Z INFO StepsRunner] Starting the step.
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:10:27Z INFO ExecutionContext] Write event payload to /home/runner/work/_temp/_github_workflow/event.json
+[2026-11-04 23:10:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2ce20fcd-4f35-415e-9bcd-f79f89bc5183', success rate: 1/1.
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:10:27Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-11-04 23:10:27Z INFO ArtifactsListFileCommand] Wrote $GITHUB_ARTIFACTS_LIST with 0 subject(s) to '/home/runner/work/_temp/_runner_file_commands/artifacts_list_febc622d-108a-43f0-bc6b-06069be6cdd6'
+[2026-11-04 23:10:27Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command error
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command group
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-11-04 23:10:27Z INFO ScriptHandler] Which2: 'bash'
+[2026-11-04 23:10:27Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:10:27Z INFO ScriptHandler] Which2: 'bash'
+[2026-11-04 23:10:27Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/bash'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Arguments: '-e /home/runner/work/_temp/ab1702db-3029-4cbd-84f2-59617c908428.sh'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Working directory: '/home/runner/work/VeloCloud/VeloCloud'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 2393.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Process started with process id 2393, waiting for process exit.
+[2026-11-04 23:10:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record '966f2f15-5567-401a-80c9-762fd1069226', success rate: 1/1.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Finished process 2393 with exit code 0, and elapsed time 00:00:00.1486214.
+[2026-11-04 23:10:27Z INFO CreateStepSummaryCommand] Step Summary file (/home/runner/work/_temp/_runner_file_commands/step_summary_febc622d-108a-43f0-bc6b-06069be6cdd6) is empty; skipping attachment upload
+[2026-11-04 23:10:27Z INFO CreateArtifactsFileCommand] Processing $GITHUB_ARTIFACTS file '/home/runner/work/_temp/_runner_file_commands/artifacts_febc622d-108a-43f0-bc6b-06069be6cdd6'
+[2026-11-04 23:10:27Z INFO CreateArtifactsFileCommand] $GITHUB_ARTIFACTS file is empty; nothing to process.
+[2026-11-04 23:10:27Z INFO StepsRunner] Step result: 
+[2026-11-04 23:10:27Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "sh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "966f2f15-5567-401a-80c9-762fd1069226",
+  "stepContextName": "__run",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2026-11-04T23:10:27.2097331Z",
+  "finishTime": "2026-11-04T23:10:27.5016325Z"
+}.
+[2026-11-04 23:10:27Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-11-04 23:10:27Z INFO StepsRunner] Current state: job state = ''
+[2026-11-04 23:10:27Z INFO StepsRunner] Processing step: DisplayName='Install backup/restore scripts'
+[2026-11-04 23:10:27Z INFO StepsRunner] Evaluating: success()
+[2026-11-04 23:10:27Z INFO StepsRunner] Result: true
+[2026-11-04 23:10:27Z INFO StepsRunner] Starting the step.
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:10:27Z INFO ExecutionContext] Write event payload to /home/runner/work/_temp/_github_workflow/event.json
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:10:27Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-11-04 23:10:27Z INFO ArtifactsListFileCommand] Wrote $GITHUB_ARTIFACTS_LIST with 0 subject(s) to '/home/runner/work/_temp/_runner_file_commands/artifacts_list_b93b11c6-93b7-4872-875e-eb8c0209e130'
+[2026-11-04 23:10:27Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command error
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command group
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-11-04 23:10:27Z INFO ScriptHandler] Which2: 'bash'
+[2026-11-04 23:10:27Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:10:27Z INFO ScriptHandler] Which2: 'bash'
+[2026-11-04 23:10:27Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/bash'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Arguments: '-e /home/runner/work/_temp/432be592-4a1d-4dca-8a4d-6838169dca61.sh'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Working directory: '/home/runner/work/VeloCloud/VeloCloud'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 2398.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Process started with process id 2398, waiting for process exit.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Finished process 2398 with exit code 0, and elapsed time 00:00:00.0053577.
+[2026-11-04 23:10:27Z INFO CreateStepSummaryCommand] Step Summary file (/home/runner/work/_temp/_runner_file_commands/step_summary_b93b11c6-93b7-4872-875e-eb8c0209e130) is empty; skipping attachment upload
+[2026-11-04 23:10:27Z INFO CreateArtifactsFileCommand] Processing $GITHUB_ARTIFACTS file '/home/runner/work/_temp/_runner_file_commands/artifacts_b93b11c6-93b7-4872-875e-eb8c0209e130'
+[2026-11-04 23:10:27Z INFO CreateArtifactsFileCommand] $GITHUB_ARTIFACTS file is empty; nothing to process.
+[2026-11-04 23:10:27Z INFO StepsRunner] Step result: 
+[2026-11-04 23:10:27Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "sh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "d39eddbb-8474-4bfa-96bd-d8dbf4004615",
+  "stepContextName": "__run_2",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2026-11-04T23:10:27.5021975Z",
+  "finishTime": "2026-11-04T23:10:27.5280238Z"
+}.
+[2026-11-04 23:10:27Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-11-04 23:10:27Z INFO StepsRunner] Current state: job state = ''
+[2026-11-04 23:10:27Z INFO StepsRunner] Processing step: DisplayName='Install SSHX and restore previous VPS state'
+[2026-11-04 23:10:27Z INFO StepsRunner] Evaluating: success()
+[2026-11-04 23:10:27Z INFO StepsRunner] Result: true
+[2026-11-04 23:10:27Z INFO StepsRunner] Starting the step.
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:10:27Z INFO ExecutionContext] Write event payload to /home/runner/work/_temp/_github_workflow/event.json
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:10:27Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-11-04 23:10:27Z INFO ArtifactsListFileCommand] Wrote $GITHUB_ARTIFACTS_LIST with 0 subject(s) to '/home/runner/work/_temp/_runner_file_commands/artifacts_list_85a10248-67a5-4465-814f-4b9fa20ce42a'
+[2026-11-04 23:10:27Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command error
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command group
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-11-04 23:10:27Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-11-04 23:10:27Z INFO ScriptHandler] Which2: 'bash'
+[2026-11-04 23:10:27Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:27Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:10:27Z INFO ScriptHandler] Which2: 'bash'
+[2026-11-04 23:10:27Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/bash'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Arguments: '-e /home/runner/work/_temp/99761c3c-0e2f-4ea4-a72d-bb41b1b68dd2.sh'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Working directory: '/home/runner/work/VeloCloud/VeloCloud'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 2402.
+[2026-11-04 23:10:27Z INFO ProcessInvokerWrapper] Process started with process id 2402, waiting for process exit.
+[2026-11-04 23:10:27Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2026-11-04 23:10:27Z INFO JobServerQueue] Try to append 2 batches web console lines for record 'd39eddbb-8474-4bfa-96bd-d8dbf4004615', success rate: 2/2.
+[2026-11-04 23:10:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c475b4b9-6760-4ea1-927f-6480dae2d7b0', success rate: 1/1.
+[2026-11-04 23:10:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c475b4b9-6760-4ea1-927f-6480dae2d7b0', success rate: 1/1.
+[2026-11-04 23:10:28Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-11-04 23:10:28Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /home/runner/actions-runner/cached/2.338.2/_diag/blocks/5805aa2a-0ac1-8dd6-9c2d-4f2f36d2a539_2ce20fcd-4f35-415e-9bcd-f79f89bc5183.1
+[2026-11-04 23:10:28Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:28Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:28Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:28Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c475b4b9-6760-4ea1-927f-6480dae2d7b0', success rate: 1/1.
+[2026-11-04 23:10:28Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-11-04 23:10:28Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /home/runner/actions-runner/cached/2.338.2/_diag/blocks/5805aa2a-0ac1-8dd6-9c2d-4f2f36d2a539_966f2f15-5567-401a-80c9-762fd1069226.1
+[2026-11-04 23:10:28Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c475b4b9-6760-4ea1-927f-6480dae2d7b0', success rate: 1/1.
+[2026-11-04 23:10:28Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-11-04 23:10:28Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /home/runner/actions-runner/cached/2.338.2/_diag/blocks/5805aa2a-0ac1-8dd6-9c2d-4f2f36d2a539_d39eddbb-8474-4bfa-96bd-d8dbf4004615.1
+[2026-11-04 23:10:28Z INFO JobServerQueue] Tried to upload 3 file(s) to results, success rate: 3/3.
+[2026-11-04 23:10:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c475b4b9-6760-4ea1-927f-6480dae2d7b0', success rate: 1/1.
+[2026-11-04 23:10:38Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:38Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:38Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:48Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:48Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:48Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:10:57Z INFO JobServerQueue] Stop aggressive process web console line queue.
+[2026-11-04 23:10:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:10:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:10:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:11:08Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:11:08Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:11:08Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:11:11Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c475b4b9-6760-4ea1-927f-6480dae2d7b0', success rate: 1/1.
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper] Finished process 2402 with exit code 0, and elapsed time 00:00:45.6349463.
+[2026-11-04 23:11:13Z INFO CreateStepSummaryCommand] Step Summary file (/home/runner/work/_temp/_runner_file_commands/step_summary_85a10248-67a5-4465-814f-4b9fa20ce42a) is empty; skipping attachment upload
+[2026-11-04 23:11:13Z INFO CreateArtifactsFileCommand] Processing $GITHUB_ARTIFACTS file '/home/runner/work/_temp/_runner_file_commands/artifacts_85a10248-67a5-4465-814f-4b9fa20ce42a'
+[2026-11-04 23:11:13Z INFO CreateArtifactsFileCommand] $GITHUB_ARTIFACTS file is empty; nothing to process.
+[2026-11-04 23:11:13Z INFO StepsRunner] Step result: 
+[2026-11-04 23:11:13Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "sh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "c475b4b9-6760-4ea1-927f-6480dae2d7b0",
+  "stepContextName": "__run_3",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 46,
+  "startTime": "2026-11-04T23:10:27.5286253Z",
+  "finishTime": "2026-11-04T23:11:13.170694Z"
+}.
+[2026-11-04 23:11:13Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-11-04 23:11:13Z INFO StepsRunner] Current state: job state = ''
+[2026-11-04 23:11:13Z INFO StepsRunner] Processing step: DisplayName='Start SSHX VPS with periodic auto-backup'
+[2026-11-04 23:11:13Z INFO StepsRunner] Evaluating: success()
+[2026-11-04 23:11:13Z INFO StepsRunner] Result: true
+[2026-11-04 23:11:13Z INFO StepsRunner] Starting the step.
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:11:13Z INFO ExecutionContext] Write event payload to /home/runner/work/_temp/_github_workflow/event.json
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:11:13Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-11-04 23:11:13Z INFO ArtifactsListFileCommand] Wrote $GITHUB_ARTIFACTS_LIST with 0 subject(s) to '/home/runner/work/_temp/_runner_file_commands/artifacts_list_4225d25a-0b5e-48c6-b32a-ec3851ac9671'
+[2026-11-04 23:11:13Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command error
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command group
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-11-04 23:11:13Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-11-04 23:11:13Z INFO ScriptHandler] Which2: 'bash'
+[2026-11-04 23:11:13Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:11:13Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-04 23:11:13Z INFO ScriptHandler] Which2: 'bash'
+[2026-11-04 23:11:13Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/bash'
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper]   Arguments: '-e /home/runner/work/_temp/4705220d-f72b-43b8-a2bd-a6131c034269.sh'
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper]   Working directory: '/home/runner/work/VeloCloud/VeloCloud'
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 2807.
+[2026-11-04 23:11:13Z INFO ProcessInvokerWrapper] Process started with process id 2807, waiting for process exit.
+[2026-11-04 23:11:13Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2216e99d-4090-4ad0-ab25-0e017673e23b', success rate: 1/1.
+[2026-11-04 23:11:13Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2026-11-04 23:11:13Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-11-04 23:11:13Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /home/runner/actions-runner/cached/2.338.2/_diag/blocks/5805aa2a-0ac1-8dd6-9c2d-4f2f36d2a539_c475b4b9-6760-4ea1-927f-6480dae2d7b0.1
+[2026-11-04 23:11:13Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2216e99d-4090-4ad0-ab25-0e017673e23b', success rate: 1/1.
+[2026-11-04 23:11:13Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2026-11-04 23:11:18Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:11:18Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:11:18Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:11:28Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:11:28Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:11:28Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:11:38Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:11:38Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:11:38Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:11:48Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:11:48Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:11:48Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:11:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:11:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:11:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:12:08Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:12:08Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:12:08Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:12:18Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:12:18Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:12:18Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:12:28Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:12:28Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:12:28Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:12:38Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:12:38Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:12:38Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:12:48Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:12:48Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:12:48Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:12:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:12:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:12:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:13:08Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:13:08Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:13:08Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:13:18Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:13:18Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:13:18Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:13:28Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:13:28Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:13:28Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:13:38Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:13:38Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:13:38Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:13:48Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:13:48Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:13:48Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:13:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:13:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:13:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:14:08Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:14:08Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:14:08Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:14:18Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:14:18Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:14:18Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:14:28Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:14:28Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:14:28Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:14:38Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:14:38Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:14:38Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:14:48Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:14:48Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:14:48Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:14:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:14:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:14:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:14:58Z INFO BrokerServer] Runner websocket received a ping: ping 2026-11-04T23:14:58Z
+[2026-11-04 23:14:58Z INFO BrokerServer] Runner replied via websocket with: ping 2026-11-04T23:14:58Z
+[2026-11-04 23:15:08Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:15:08Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:15:08Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:15:18Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:15:18Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:15:18Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:15:28Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:15:28Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:15:28Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:15:38Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:15:38Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:15:38Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:15:48Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:15:48Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:15:48Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:15:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:15:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:15:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:16:08Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:16:08Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:16:08Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:16:18Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:16:18Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:16:18Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:16:28Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:16:28Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:16:28Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:16:38Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:16:38Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:16:38Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:16:48Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:16:48Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:16:48Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:16:58Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:16:58Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:16:58Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:17:08Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:17:08Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:17:08Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:17:18Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:17:18Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:17:18Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 23:17:28Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 23:17:28Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 23:17:28Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
