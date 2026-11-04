@@ -1,0 +1,163 @@
+[2026-11-04 13:43:30Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 13:43:30Z INFO HostContext] Well known config file 'Credentials': '/home/runner/actions-runner/cached/2.338.2/.credentials'
+[2026-11-04 13:43:30Z INFO HostContext] Pull OrchestrationId d92bbc0f-d81f-8514-9dfe-3e9e48b24cd5.Build-VPS.__default from runner JWT claims
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 13:43:30Z INFO HostContext] Well known config file 'Runner': '/home/runner/actions-runner/cached/2.338.2/.runner'
+[2026-11-04 13:43:30Z INFO Listener] Runner is built for Linux (X64) - linux-x64.
+[2026-11-04 13:43:30Z INFO Listener] RuntimeInformation: Ubuntu 24.04.5 LTS.
+[2026-11-04 13:43:30Z INFO Listener] Version: 2.338.2
+[2026-11-04 13:43:30Z INFO Listener] Commit: d1eb12d4b115c301201de27d667284e1a80f2ab5
+[2026-11-04 13:43:30Z INFO Listener] Culture: 
+[2026-11-04 13:43:30Z INFO Listener] UI Culture: 
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 13:43:30Z INFO Listener] Validating directory permissions for: '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 13:43:30Z INFO CommandLineParser] Parse
+[2026-11-04 13:43:30Z INFO CommandLineParser] Parsing 1 args
+[2026-11-04 13:43:30Z INFO CommandLineParser] parsing argument
+[2026-11-04 13:43:30Z INFO CommandLineParser] HasArgs: False
+[2026-11-04 13:43:30Z INFO CommandLineParser] Adding Command: run
+[2026-11-04 13:43:30Z INFO Listener] Arguments parsed
+[2026-11-04 13:43:30Z INFO Runner] ExecuteCommand
+[2026-11-04 13:43:30Z INFO ConfigurationStore] currentAssemblyLocation: /home/runner/actions-runner/cached/2.338.2/bin/Runner.Listener.dll
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:30Z INFO ConfigurationStore] binPath: /home/runner/actions-runner/cached/2.338.2/bin
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 13:43:30Z INFO ConfigurationStore] RootFolder: /home/runner/actions-runner/cached/2.338.2
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 13:43:30Z INFO HostContext] Well known config file 'Runner': '/home/runner/actions-runner/cached/2.338.2/.runner'
+[2026-11-04 13:43:30Z INFO ConfigurationStore] ConfigFilePath: /home/runner/actions-runner/cached/2.338.2/.runner
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 13:43:30Z INFO HostContext] Well known config file 'MigratedRunner': '/home/runner/actions-runner/cached/2.338.2/.runner_migrated'
+[2026-11-04 13:43:30Z INFO ConfigurationStore] MigratedConfigFilePath: /home/runner/actions-runner/cached/2.338.2/.runner_migrated
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 13:43:30Z INFO HostContext] Well known config file 'Credentials': '/home/runner/actions-runner/cached/2.338.2/.credentials'
+[2026-11-04 13:43:30Z INFO ConfigurationStore] CredFilePath: /home/runner/actions-runner/cached/2.338.2/.credentials
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 13:43:30Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/runner/actions-runner/cached/2.338.2/.credentials_migrated'
+[2026-11-04 13:43:30Z INFO ConfigurationStore] MigratedCredFilePath: /home/runner/actions-runner/cached/2.338.2/.credentials_migrated
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 13:43:30Z INFO HostContext] Well known config file 'Service': '/home/runner/actions-runner/cached/2.338.2/.service'
+[2026-11-04 13:43:30Z INFO ConfigurationStore] ServiceConfigFilePath: /home/runner/actions-runner/cached/2.338.2/.service
+[2026-11-04 13:43:30Z INFO CommandSettings] Flag 'help': 'False'
+[2026-11-04 13:43:30Z INFO CommandSettings] Flag 'version': 'False'
+[2026-11-04 13:43:30Z INFO CommandSettings] Flag 'commit': 'False'
+[2026-11-04 13:43:30Z INFO CommandSettings] Flag 'check': 'False'
+[2026-11-04 13:43:30Z INFO CommandSettings] Command 'configure': 'False'
+[2026-11-04 13:43:30Z INFO CommandSettings] Command 'remove': 'False'
+[2026-11-04 13:43:30Z INFO CommandSettings] Command 'warmup': 'False'
+[2026-11-04 13:43:30Z INFO ConfigurationManager] LoadSettings
+[2026-11-04 13:43:30Z INFO ConfigurationStore] IsConfigured()
+[2026-11-04 13:43:30Z INFO ConfigurationStore] IsConfigured: True
+[2026-11-04 13:43:30Z INFO ConfigurationManager] Is configured: True
+[2026-11-04 13:43:30Z INFO ConfigurationStore] Read setting file: 281 chars
+[2026-11-04 13:43:30Z INFO ConfigurationManager] Settings Loaded
+[2026-11-04 13:43:30Z INFO ConfigurationStore] IsServiceConfigured()
+[2026-11-04 13:43:30Z INFO ConfigurationStore] IsServiceConfigured: False
+[2026-11-04 13:43:30Z INFO CommandSettings] Command 'run': 'True'
+[2026-11-04 13:43:30Z INFO ConfigurationStore] IsConfigured()
+[2026-11-04 13:43:30Z INFO ConfigurationStore] IsConfigured: True
+[2026-11-04 13:43:30Z INFO ConfigurationManager] Is configured: True
+[2026-11-04 13:43:30Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2026-11-04 13:43:30Z INFO Runner] Set runner startup type - Manual
+[2026-11-04 13:43:30Z INFO CommandSettings] Flag 'once': 'False'
+[2026-11-04 13:43:30Z INFO CommandSettings] Flag 'once': 'False'
+[2026-11-04 13:43:30Z INFO Runner] RunAsync
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-04 13:43:30Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-04 13:43:30Z INFO Runner] Validating directory permissions for: '/home/runner/work'
+[2026-11-04 13:43:30Z INFO ConfigurationManager] LoadMigratedSettings
+[2026-11-04 13:43:30Z INFO ConfigurationStore] IsMigratedConfigured()
+[2026-11-04 13:43:30Z INFO ConfigurationStore] IsMigratedConfigured: False
+[2026-11-04 13:43:30Z INFO Runner] Failed to load migrated settings: No migrated configuration found.
+[2026-11-04 13:43:30Z INFO Runner] Falling back to original .runner settings
+[2026-11-04 13:43:30Z INFO Runner] Using BrokerMessageListener
+[2026-11-04 13:43:30Z INFO BrokerMessageListener] Using provided settings
+[2026-11-04 13:43:30Z INFO BrokerMessageListener] {
+  "AgentId": 1000000134,
+  "AgentName": "GitHub Actions 1000000134",
+  "SkipSessionRecover": true,
+  "PoolName": "GitHub Actions",
+  "ServerUrl": "",
+  "WorkFolder": "/home/runner/work",
+  "UseV2Flow": true,
+  "ServerUrlV2": "https://broker.actions.githubusercontent.com"
+}
+[2026-11-04 13:43:30Z INFO BrokerMessageListener] Loading Credentials
+[2026-11-04 13:43:30Z INFO ConfigurationStore] HasCredentials()
+[2026-11-04 13:43:30Z INFO ConfigurationStore] stored True
+[2026-11-04 13:43:30Z INFO CredentialManager] GetCredentialProvider
+[2026-11-04 13:43:30Z INFO CredentialManager] Creating type OAuthAccessToken
+[2026-11-04 13:43:30Z INFO CredentialManager] Creating credential type: OAuthAccessToken
+[2026-11-04 13:43:30Z INFO OAuthAccessTokenCredential] GetVssCredentials
+[2026-11-04 13:43:30Z INFO OAuthAccessTokenCredential] token retrieved: 1543 chars
+[2026-11-04 13:43:30Z INFO OAuthAccessTokenCredential] cred created
+[2026-11-04 13:43:30Z INFO BrokerMessageListener] Attempt to create session.
+[2026-11-04 13:43:30Z INFO BrokerMessageListener] Connecting to the Broker Server...
+[2026-11-04 13:43:30Z INFO ConfigurationStore] HasCredentials()
+[2026-11-04 13:43:30Z INFO ConfigurationStore] stored True
+[2026-11-04 13:43:30Z INFO CredentialManager] GetCredentialProvider
+[2026-11-04 13:43:30Z INFO CredentialManager] Creating type OAuthAccessToken
+[2026-11-04 13:43:30Z INFO CredentialManager] Creating credential type: OAuthAccessToken
+[2026-11-04 13:43:30Z INFO OAuthAccessTokenCredential] GetVssCredentials
+[2026-11-04 13:43:30Z INFO OAuthAccessTokenCredential] token retrieved: 1543 chars
+[2026-11-04 13:43:30Z INFO OAuthAccessTokenCredential] cred created
+[2026-11-04 13:43:30Z INFO BrokerMessageListener] VssConnection created
+[2026-11-04 13:43:30Z INFO Terminal] WRITE LINE: 
+[2026-11-04 13:43:30Z INFO Terminal] WRITE LINE: 
+[2026-11-04 13:43:30Z INFO BrokerMessageListener] Session created.
+[2026-11-04 13:43:30Z INFO Terminal] WRITE LINE: Current runner version: '2.338.2'
+[2026-11-04 13:43:30Z INFO Terminal] WRITE LINE: 2026-11-04 13:43:30Z: Listening for Jobs
+[2026-11-04 13:43:30Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2026-11-04 13:43:30Z INFO BrokerMessageListener] Acknowledging runner request 'e8bd1800-c8f5-571e-965d-146f3fcde7b0'.
+[2026-11-04 13:43:30Z INFO ConfigurationStore] HasCredentials()
+[2026-11-04 13:43:30Z INFO ConfigurationStore] stored True
+[2026-11-04 13:43:30Z INFO CredentialManager] GetCredentialProvider
+[2026-11-04 13:43:30Z INFO CredentialManager] Creating type OAuthAccessToken
+[2026-11-04 13:43:30Z INFO CredentialManager] Creating credential type: OAuthAccessToken
+[2026-11-04 13:43:30Z INFO OAuthAccessTokenCredential] GetVssCredentials
+[2026-11-04 13:43:30Z INFO OAuthAccessTokenCredential] token retrieved: 1543 chars
+[2026-11-04 13:43:30Z INFO OAuthAccessTokenCredential] cred created
+[2026-11-04 13:43:31Z INFO JobDispatcher] Job request 0 for plan d92bbc0f-d81f-8514-9dfe-3e9e48b24cd5 job e8bd1800-c8f5-571e-965d-146f3fcde7b0 received.
+[2026-11-04 13:43:31Z INFO JobDispatcher] Pull OrchestrationId d92bbc0f-d81f-8514-9dfe-3e9e48b24cd5.Build-VPS.__default from JWT claims
+[2026-11-04 13:43:31Z INFO JobDispatcher] Start dispatcher for one time used runner.
+[2026-11-04 13:43:31Z INFO BrokerMessageListener] Received job status event. JobState: Busy
+[2026-11-04 13:43:31Z INFO BrokerMessageListener] _getMessagesTokenSource is already disposed.
+[2026-11-04 13:43:31Z INFO Terminal] WRITE LINE: 2026-11-04 13:43:31Z: Running job: Build-VPS
+[2026-11-04 13:43:31Z INFO JobDispatcher] Start renew job request 0 for job e8bd1800-c8f5-571e-965d-146f3fcde7b0.
+[2026-11-04 13:43:31Z INFO Runner] One time used runner received job message.
+[2026-11-04 13:43:31Z INFO JobDispatcher] Successfully renew job e8bd1800-c8f5-571e-965d-146f3fcde7b0, job is valid till 11/04/2026 14:28:31
+[2026-11-04 13:43:31Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper]   File name: '/home/runner/actions-runner/cached/2.338.2/bin/Runner.Worker'
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 142 145'
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper]   Working directory: '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2026-11-04 13:43:31Z INFO ProcessInvokerWrapper] Process started with process id 2079, waiting for process exit.
+[2026-11-04 13:43:31Z INFO JobDispatcher] Send job request message to worker for job e8bd1800-c8f5-571e-965d-146f3fcde7b0.
+[2026-11-04 13:43:31Z INFO ProcessChannel] Sending message of length 29244, with hash '952ba874a645a8b8d01b34dccca0ed1055f7c9741dcb598317ef89ed956182dc'
+[2026-11-04 13:43:31Z INFO JobNotification] Entering JobStarted Notification
+[2026-11-04 13:43:31Z INFO JobNotification] Entering StartMonitor
+[2026-11-04 13:44:32Z INFO JobDispatcher] Successfully renew job e8bd1800-c8f5-571e-965d-146f3fcde7b0, job is valid till 11/04/2026 14:29:31
+[2026-11-04 13:45:32Z INFO JobDispatcher] Successfully renew job e8bd1800-c8f5-571e-965d-146f3fcde7b0, job is valid till 11/04/2026 14:30:32
+[2026-11-04 13:46:32Z INFO JobDispatcher] Successfully renew job e8bd1800-c8f5-571e-965d-146f3fcde7b0, job is valid till 11/04/2026 14:31:32
+[2026-11-04 13:47:32Z INFO JobDispatcher] Successfully renew job e8bd1800-c8f5-571e-965d-146f3fcde7b0, job is valid till 11/04/2026 14:32:32
+[2026-11-04 13:48:32Z INFO JobDispatcher] Successfully renew job e8bd1800-c8f5-571e-965d-146f3fcde7b0, job is valid till 11/04/2026 14:33:32
+[2026-11-04 13:49:32Z INFO JobDispatcher] Successfully renew job e8bd1800-c8f5-571e-965d-146f3fcde7b0, job is valid till 11/04/2026 14:34:32
+[2026-11-04 13:50:32Z INFO JobDispatcher] Successfully renew job e8bd1800-c8f5-571e-965d-146f3fcde7b0, job is valid till 11/04/2026 14:35:32
