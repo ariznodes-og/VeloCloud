@@ -61,4 +61,61 @@
 2026-11-05T14:37:12.5521946Z Backup pushed to main
 2026-11-05T14:42:12.5588440Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
 2026-11-05T14:42:18.4666653Z Backup pushed to main
-2026-11-05T14:47:18.4732706Z rm: cannot remove '/tmp/skipped.list': Operation not
+2026-11-05T14:47:18.4732706Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T14:47:24.4021803Z Backup pushed to main
+2026-11-05T14:52:24.4085711Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T14:52:30.3366351Z Backup pushed to main
+2026-11-05T14:57:30.3431760Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T14:57:36.2523918Z Backup pushed to main
+2026-11-05T15:02:36.2589815Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:02:42.1089519Z Backup pushed to main
+2026-11-05T15:07:42.1155222Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:07:47.9293275Z Backup pushed to main
+2026-11-05T15:12:47.9357086Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:12:53.8755468Z Backup pushed to main
+2026-11-05T15:17:53.8819596Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:17:59.9032743Z Backup pushed to main
+2026-11-05T15:22:59.9207262Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:23:05.9352817Z Backup pushed to main
+2026-11-05T15:28:05.9418258Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:28:11.8728020Z Backup pushed to main
+2026-11-05T15:33:11.8793348Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:33:17.7806381Z Backup pushed to main
+2026-11-05T15:38:17.7873050Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:38:23.6717067Z Backup pushed to main
+2026-11-05T15:43:23.6782249Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:43:29.6172894Z Backup pushed to main
+2026-11-05T15:48:29.6237292Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:48:35.5186397Z Backup pushed to main
+2026-11-05T15:53:35.5255668Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:53:41.3461188Z Backup pushed to main
+2026-11-05T15:58:41.3527268Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T15:58:47.0987059Z Backup pushed to main
+2026-11-05T16:03:47.1059762Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T16:04:01.7308580Z Backup pushed to main
+2026-11-05T16:09:01.7373790Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T16:09:07.4566401Z remote: fatal error in commit_refs_rules        
+2026-11-05T16:09:07.4572945Z To https://github.com/ariznodes-og/VeloCloud
+2026-11-05T16:09:07.4573731Z  ! [remote rejected]     HEAD -> main (fatal error in commit_refs_rules
+2026-11-05T16:09:07.4574307Z )
+2026-11-05T16:09:07.4574803Z error: failed to push some refs to 'https://github.com/ariznodes-og/VeloCloud'
+2026-11-05T16:09:14.8447291Z Backup pushed to main
+2026-11-05T16:14:14.8513567Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T16:14:20.6969316Z Backup pushed to main
+2026-11-05T16:19:20.7034069Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T16:19:26.5968833Z Backup pushed to main
+2026-11-05T16:24:26.6034307Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T16:24:32.4488344Z Backup pushed to main
+2026-11-05T16:29:32.4555006Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T16:29:38.1676045Z Backup pushed to main
+2026-11-05T16:34:38.1741033Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T16:34:43.9321132Z Backup pushed to main
+2026-11-05T16:39:43.9385759Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T16:39:49.7426830Z Backup pushed to main
+2026-11-05T16:44:49.7491227Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T16:44:55.8746730Z Backup pushed to main
+2026-11-05T16:49:55.8814980Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T16:50:01.8208611Z Backup pushed to main
+2026-11-05T16:55:01.8272007Z rm: cannot remove '/tmp/skipped.list': Operation not permitted
+2026-11-05T16:55:07.7210952Z Backup pushed to main
+2026-11-05T17:00:07.7274674Z rm: cannot remove '/tmp/skipped.list':
