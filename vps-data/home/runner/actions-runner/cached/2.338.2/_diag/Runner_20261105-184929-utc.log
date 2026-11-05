@@ -350,3 +350,9 @@
 [2026-11-05 22:03:41Z INFO JobDispatcher] Successfully renew job 34f9fc1c-ab1a-5254-83e6-1474c56f0f01, job is valid till 11/05/2026 22:48:41
 [2026-11-05 22:04:41Z INFO JobDispatcher] Successfully renew job 34f9fc1c-ab1a-5254-83e6-1474c56f0f01, job is valid till 11/05/2026 22:49:41
 [2026-11-05 22:05:41Z INFO JobDispatcher] Successfully renew job 34f9fc1c-ab1a-5254-83e6-1474c56f0f01, job is valid till 11/05/2026 22:50:41
+[2026-11-05 22:06:56Z WARN GitHubActionsService] Attempt 1 of POST request to https://run-actions-3-azure-eastus.actions.githubusercontent.com/86/renewjob failed (HTTP Status: GatewayTimeout). The operation will be retried in 10.819 seconds.
+[2026-11-05 22:07:22Z WARN GitHubActionsService] Attempt 2 of POST request to https://run-actions-3-azure-eastus.actions.githubusercontent.com/86/renewjob failed (HTTP Status: GatewayTimeout). The operation will be retried in 12.748 seconds.
+[2026-11-05 22:07:35Z INFO JobDispatcher] Successfully renew job 34f9fc1c-ab1a-5254-83e6-1474c56f0f01, job is valid till 11/05/2026 22:52:35
+[2026-11-05 22:08:35Z INFO JobDispatcher] Successfully renew job 34f9fc1c-ab1a-5254-83e6-1474c56f0f01, job is valid till 11/05/2026 22:53:35
+[2026-11-05 22:09:35Z INFO JobDispatcher] Successfully renew job 34f9fc1c-ab1a-5254-83e6-1474c56f0f01, job is valid till 11/05/2026 22:54:35
+[2026-11-05 22:10:35Z INFO JobDispatcher] Successfully renew job 34f9fc1c-ab1a-5254-83e6-1474c56f0f01, job is valid till 11/05/2026 22:55:35
