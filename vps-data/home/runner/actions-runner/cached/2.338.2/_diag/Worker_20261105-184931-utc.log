@@ -4641,3 +4641,120 @@
 [2026-11-05 20:14:22Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
 [2026-11-05 20:14:22Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
 [2026-11-05 20:14:22Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:14:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e0933ce1-f0cc-4ec0-9c63-1ad1c89215b4', success rate: 1/1.
+[2026-11-05 20:14:32Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:14:32Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:14:32Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:14:33Z INFO BrokerServer] Runner websocket received a ping: ping 2026-11-05T20:14:33Z
+[2026-11-05 20:14:33Z INFO BrokerServer] Runner replied via websocket with: ping 2026-11-05T20:14:33Z
+[2026-11-05 20:14:42Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:14:42Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:14:42Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:14:52Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:14:52Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:14:52Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:15:02Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:15:02Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:15:02Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:15:12Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:15:12Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:15:12Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:15:22Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:15:22Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:15:22Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:15:32Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:15:32Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:15:32Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:15:42Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:15:42Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:15:42Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:15:52Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:15:52Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:15:52Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:16:02Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:16:02Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:16:02Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:16:12Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:16:12Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:16:12Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:16:22Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:16:22Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:16:22Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:16:32Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:16:32Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:16:32Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:16:42Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:16:42Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:16:42Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:16:52Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:16:52Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:16:52Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:17:02Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:17:02Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:17:02Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:17:12Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:17:12Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:17:12Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:17:22Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:17:22Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:17:22Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:17:32Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:17:32Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:17:32Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:17:42Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:17:42Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:17:42Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:17:52Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:17:52Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:17:52Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:18:02Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:18:02Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:18:02Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:18:12Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:18:12Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:18:12Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:18:22Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:18:22Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:18:22Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:18:32Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:18:32Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:18:32Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:18:42Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:18:42Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:18:42Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:18:52Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:18:52Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:18:52Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:19:02Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:19:02Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:19:02Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:19:12Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:19:12Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:19:12Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:19:22Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-05 20:19:22Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-05 20:19:22Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-05 20:19:25Z INFO ResultServer] Websocket is not open, let's attempt to connect back again with random backoff 00:00:00.1330000 ms.
+[2026-11-05 20:19:25Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2026-11-05 20:19:25Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.1330000.
+[2026-11-05 20:19:25Z INFO ResultServer] Websocket is not open, let's attempt to connect back again with random backoff 00:00:00.3540000 ms.
+[2026-11-05 20:19:25Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2026-11-05 20:19:25Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.3540000.
+[2026-11-05 20:19:25Z INFO ResultServer] Websocket is not open, let's attempt to connect back again with random backoff 00:00:00.1520000 ms.
+[2026-11-05 20:19:25Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2026-11-05 20:19:25Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.1520000.
+[2026-11-05 20:19:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e0933ce1-f0cc-4ec0-9c63-1ad1c89215b4', success rate: 1/1.
+[2026-11-05 20:19:26Z INFO ResultServer] Exception caught during websocket client connect, retry connection.
+[2026-11-05 20:19:26Z ERR  ResultServer] System.InvalidOperationException: The WebSocket has already been started.
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at GitHub.Runner.Common.ResultServer.ConnectWebSocketClient(String feedStreamUrl, TimeSpan delay, Boolean retryConnection)
+[2026-11-05 20:19:26Z INFO ResultServer] Exception caught during websocket client connect, retry connection.
+[2026-11-05 20:19:26Z ERR  ResultServer] System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.WebSockets.ClientWebSocket'.
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at GitHub.Runner.Common.ResultServer.ConnectWebSocketClient(String feedStreamUrl, TimeSpan delay, Boolean retryConnection)
+[2026-11-05 20:19:26Z INFO ResultServer] Exception caught during websocket client connect, retry connection.
+[2026-11-05 20:19:26Z ERR  ResultServer] System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.WebSockets.ClientWebSocket'.
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at GitHub.Runner.Common.ResultServer.ConnectWebSocketClient(String feedStreamUrl, TimeSpan delay, Boolean retryConnection)
