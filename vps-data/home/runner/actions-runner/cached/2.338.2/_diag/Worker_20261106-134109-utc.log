@@ -9387,3 +9387,154 @@ Object name: 'System.Net.WebSockets.ClientWebSocket'.
 [2026-11-06 19:13:20Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
 [2026-11-06 19:13:20Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
 [2026-11-06 19:13:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record '52a0c294-9b9d-4d80-bc6e-65c90b9d2949', success rate: 1/1.
+[2026-11-06 19:13:28Z INFO JobServerQueue] Try to append 1 batches web console lines for record '52a0c294-9b9d-4d80-bc6e-65c90b9d2949', success rate: 1/1.
+[2026-11-06 19:13:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:13:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:13:30Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:13:40Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:13:40Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:13:40Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:13:50Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:13:50Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:13:50Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:14:00Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:14:00Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:14:00Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:14:10Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:14:10Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:14:10Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:14:20Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:14:20Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:14:20Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:14:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:14:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:14:30Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:14:40Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:14:40Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:14:40Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:14:50Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:14:50Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:14:50Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:15:00Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:15:00Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:15:00Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:15:10Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:15:10Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:15:10Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:15:20Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:15:20Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:15:20Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:15:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:15:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:15:30Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:15:40Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:15:40Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:15:40Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:15:50Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:15:50Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:15:50Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:16:00Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:16:00Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:16:00Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:16:10Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:16:10Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:16:10Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:16:20Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:16:20Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:16:20Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:16:30Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:16:30Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:16:30Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:16:40Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:16:40Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:16:40Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:16:50Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:16:50Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:16:50Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:17:00Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:17:00Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:17:00Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:17:08Z INFO BrokerServer] Runner websocket received a ping: ping 2026-11-06T19:17:08Z
+[2026-11-06 19:17:08Z INFO BrokerServer] Runner replied via websocket with: ping 2026-11-06T19:17:08Z
+[2026-11-06 19:17:10Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:17:10Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:17:10Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper] Finished process 2610 with exit code 0, and elapsed time 05:35:05.0053780.
+[2026-11-06 19:17:19Z INFO CreateStepSummaryCommand] Step Summary file (/home/runner/work/_temp/_runner_file_commands/step_summary_d7220046-5480-4a95-81c0-d026bf32d6d5) is empty; skipping attachment upload
+[2026-11-06 19:17:19Z INFO CreateArtifactsFileCommand] Processing $GITHUB_ARTIFACTS file '/home/runner/work/_temp/_runner_file_commands/artifacts_d7220046-5480-4a95-81c0-d026bf32d6d5'
+[2026-11-06 19:17:19Z INFO CreateArtifactsFileCommand] $GITHUB_ARTIFACTS file is empty; nothing to process.
+[2026-11-06 19:17:19Z INFO StepsRunner] Step result: 
+[2026-11-06 19:17:19Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "sh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "52a0c294-9b9d-4d80-bc6e-65c90b9d2949",
+  "stepContextName": "__run_4",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 20106,
+  "startTime": "2026-11-06T13:42:14.5971418Z",
+  "finishTime": "2026-11-06T19:17:19.6086173Z"
+}.
+[2026-11-06 19:17:19Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-11-06 19:17:19Z INFO StepsRunner] Current state: job state = ''
+[2026-11-06 19:17:19Z INFO StepsRunner] Processing step: DisplayName='Final backup'
+[2026-11-06 19:17:19Z INFO StepsRunner] Evaluating: always()
+[2026-11-06 19:17:19Z INFO StepsRunner] Result: true
+[2026-11-06 19:17:19Z INFO StepsRunner] Starting the step.
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-06 19:17:19Z INFO ExecutionContext] Write event payload to /home/runner/work/_temp/_github_workflow/event.json
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-06 19:17:19Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-11-06 19:17:19Z INFO ArtifactsListFileCommand] Wrote $GITHUB_ARTIFACTS_LIST with 0 subject(s) to '/home/runner/work/_temp/_runner_file_commands/artifacts_list_d62ee3b8-b7fb-45dc-833f-ce343c5b4a9b'
+[2026-11-06 19:17:19Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command error
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command group
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-11-06 19:17:19Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-11-06 19:17:19Z INFO ScriptHandler] Which2: 'bash'
+[2026-11-06 19:17:19Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:17:19Z INFO HostContext] Well known directory 'Temp': '/home/runner/work/_temp'
+[2026-11-06 19:17:19Z INFO ScriptHandler] Which2: 'bash'
+[2026-11-06 19:17:19Z INFO ScriptHandler] Location: '/usr/bin/bash'
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/bash'
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper]   Arguments: '-e /home/runner/work/_temp/f132ca4c-0646-4b66-af15-aa536aaa215c.sh'
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper]   Working directory: '/home/runner/work/VeloCloud/VeloCloud'
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 12784.
+[2026-11-06 19:17:19Z INFO ProcessInvokerWrapper] Process started with process id 12784, waiting for process exit.
+[2026-11-06 19:17:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '89cd0f01-8ba0-44b9-ac7e-f93b1766f5ee', success rate: 1/1.
+[2026-11-06 19:17:20Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2026-11-06 19:17:20Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-11-06 19:17:20Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /home/runner/actions-runner/cached/2.338.2/_diag/blocks/ab5959c4-e805-8730-b9ee-f4649ffa690e_52a0c294-9b9d-4d80-bc6e-65c90b9d2949.1
+[2026-11-06 19:17:20Z INFO HostContext] Well known directory 'Bin': '/home/runner/actions-runner/cached/2.338.2/bin'
+[2026-11-06 19:17:20Z INFO HostContext] Well known directory 'Root': '/home/runner/actions-runner/cached/2.338.2'
+[2026-11-06 19:17:20Z INFO HostContext] Well known directory 'Work': '/home/runner/work'
+[2026-11-06 19:17:20Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
